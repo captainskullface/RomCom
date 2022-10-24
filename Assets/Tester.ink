@@ -1,6 +1,6 @@
 
 { shuffle:
-    - hello
+    - -> Love
     -love you
     -fuck you
     -i want a bagel
@@ -11,6 +11,10 @@
 
 }
 
+
+=== Love ===
+hello bitch i love you so much i never want to leave you
+    ->END
 
 
 
