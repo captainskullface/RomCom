@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using TMPro;
-public class ChangeStory : MonoBehaviour
+public class ScreechContent : MonoBehaviour
 {
     [Header("Ink Story")] 
     [SerializeField] TextAsset inkText;
