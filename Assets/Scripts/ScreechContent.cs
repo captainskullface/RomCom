@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using TMPro;
-public class ChangeStory : MonoBehaviour
+public class ScreechContent : MonoBehaviour
 {
     [Header("Ink Story")] 
     [SerializeField] TextAsset inkText;
@@ -20,9 +20,13 @@ public class ChangeStory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        ScreechStuff();
         
-           screeches.text = inkStory.Continue();
         
-        
+    }
+    public void ScreechStuff()
+    {
+        screeches.text = inkStory.Continue();
     }
 }
