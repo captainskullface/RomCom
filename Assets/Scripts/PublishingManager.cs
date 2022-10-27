@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
+using TMPro;
 
 public class PublishingManager : MonoBehaviour
 {
@@ -20,13 +22,12 @@ public class PublishingManager : MonoBehaviour
     float valueWeight = 0.25f;
     float sequelWeight = 0.1f;
 
-    [SerializeField]
-    AnimationCurve transferCurve;
+    Vector2 moneyBurstCooldown = new Vector2(1f, 5);
+    Vector2 moneyBurstSize = new Vector2(0.1f, 0.3f);
+    bool canSendMoney = true;
 
-    float maxTransferSpeed = 75000;
-
     [SerializeField]
-    float transferSpeed = 0;
+    AnimationCurve amountSmoothCurve;
 
     public enum Genre
     {
@@ -54,12 +55,33 @@ public class PublishingManager : MonoBehaviour
     [SerializeField]
     Genre faveGenre;
 
+    float profits;
+    float losses;
+    int booksPublished;
+
+    [Header("UI")]
+    [SerializeField]
+    TMP_Text currentMoneyDisplay;
+
+    [SerializeField]
+    TMP_Text profitsDisplay;
+
+    [SerializeField]
+    TMP_Text lossesDisplay;
+
+    [SerializeField]
+    TMP_Text lastPublishedDisplay;
+
+    [SerializeField]
+    TMP_Text amountPublishedDisplay;
+
     private void Start()
     {
-        PublishBook(2, 3, 1, 2, 2, 4);
+        PublishBook(2, 3, 1, 2, 2, 4, "HRD 4 U");
+        displayMoney = money;
     }
 
-    public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue)
+    public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue, string title)
     {
         ChangeMoney(-bookPublishCost);
 
@@ -76,6 +98,11 @@ public class PublishingManager : MonoBehaviour
         float outPutRevenue = maxBookRevenue * finalScore;
 
         ChangeMoney(Mathf.RoundToInt(outPutRevenue));
+
+        booksPublished++;
+
+        lastPublishedDisplay.text = title;
+        amountPublishedDisplay.text = booksPublished.ToString();
     }
 
     void ChangeMoney(int change)
@@ -86,6 +113,8 @@ public class PublishingManager : MonoBehaviour
         if(change < 0)
         {
             money += change;
+            losses += change;
+            lossesDisplay.text = "$" + Mathf.Abs(losses).ToString("F0");
         }
         else
         {
@@ -95,25 +124,39 @@ public class PublishingManager : MonoBehaviour
 
     private void Update()
     {
-        displayMoney = Mathf.MoveTowards(displayMoney, money, Time.deltaTime * 1000);
+        float ratio = displayMoney / money;
+        displayMoney = Mathf.MoveTowards(displayMoney, money, Time.deltaTime * (1000000 * amountSmoothCurve.Evaluate(ratio)));
 
-        
         if(pendingMoney > 0)
         {
-            float transfer = transferSpeed * Time.deltaTime;
-            if (pendingMoney >= transfer)
+            if(canSendMoney)
             {
-                pendingMoney -= transfer;
-                money += transfer;
-            }
-            else
-            {
-                pendingMoney = 0;
-                money += pendingMoney;
-            }
+                float transferAmount = pendingMoney * Random.Range(moneyBurstSize.x, moneyBurstSize.y);
+                if (pendingMoney < transferAmount || pendingMoney <= bookPublishCost)
+                {
+                    transferAmount = pendingMoney;
+                    pendingMoney = 0;
+                }
 
-            transferSpeed = transferCurve.Evaluate(pendingMoney / maxBookRevenue) * maxTransferSpeed;
+                if(pendingMoney > 0)
+                    pendingMoney -= transferAmount;
+
+                money += transferAmount;
+                profits += transferAmount;
+                    
+                StartCoroutine(BurstCooldown());
+            }
         }
+
+        profitsDisplay.text = "$" + profits.ToString("F0");
+        currentMoneyDisplay.text = "$" + displayMoney.ToString("F0");
+    }
+
+    IEnumerator BurstCooldown()
+    {
+        canSendMoney = false;
+        yield return new WaitForSecondsRealtime(Random.Range(moneyBurstCooldown.x, moneyBurstCooldown.y));
+        canSendMoney = true;
     }
 
     void addWeight(Genre type, float amount)
