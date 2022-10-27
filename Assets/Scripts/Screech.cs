@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Screech : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class Screech : MonoBehaviour
     [SerializeField]
     TMP_Text timeDisplay;
 
+    [SerializeField]
+    Image image;
+
     int timeSincePost = 0;
 
-    float chanceForImage = 10f; //Percent
+    float chanceForImage = 25f; //Percent
+
+    [SerializeField]
+    Sprite[] possibleImages;
 
     private void Start()
     {
@@ -28,7 +35,13 @@ public class Screech : MonoBehaviour
 
         AudioManager.audioMan.ScreechPosted();
 
-        float chance = Random.Range(0f, 100f);
+        float chance = Random.Range(0, 100);
+        if(chance < chanceForImage)
+        {
+            image.sprite = possibleImages[Random.Range(0, possibleImages.Length)];
+        }
+        else
+            image.gameObject.SetActive(false);
     }
 
     string PickUsername()
