@@ -7,6 +7,8 @@ using TMPro;
 
 public class PublishingManager : MonoBehaviour
 {
+    public static PublishingManager publishMan;
+
     public float money = 20000f;
 
     [SerializeField]
@@ -75,13 +77,17 @@ public class PublishingManager : MonoBehaviour
     [SerializeField]
     TMP_Text amountPublishedDisplay;
 
+    private void Awake()
+    {
+        publishMan = this;
+    }
+
     private void Start()
     {
-        PublishBook(2, 3, 1, 2, 2, 4, "HRD 4 U");
         displayMoney = money;
     }
 
-    public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue, string title)
+    public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue, string title, int index)
     {
         ChangeMoney(-bookPublishCost);
 
@@ -103,6 +109,8 @@ public class PublishingManager : MonoBehaviour
 
         lastPublishedDisplay.text = title;
         amountPublishedDisplay.text = booksPublished.ToString();
+
+        InkHandler.inkMan.NewBookPublished(index);
     }
 
     void ChangeMoney(int change)

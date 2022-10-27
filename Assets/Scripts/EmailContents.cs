@@ -13,6 +13,9 @@ public class EmailContents : MonoBehaviour
     [SerializeField]
     TMP_Text contentDisplay;
 
+    [SerializeField]
+    GameObject viewBookButton;
+
     float fadeTime = 1;
     float growTime = 0.75f;
     [SerializeField]
@@ -23,6 +26,10 @@ public class EmailContents : MonoBehaviour
     Vector2 size;
     Vector2 closedSize;
     CanvasGroup self;
+
+    int bookIndex;
+
+    string bookSynopsis;
 
     private void Awake()
     {
@@ -45,10 +52,19 @@ public class EmailContents : MonoBehaviour
         //Show();
     }
 
-    public void Setup(string sender, string subject, int bookIndex)
+    public void Setup(string sender, string subject, string contents, int index)
     {
         senderDisplay.text = sender;
         subjectDisplay.text = subject;
+        contentDisplay.text = contents;
+
+        bookSynopsis = InkHandler.inkMan.books[index].synopsis;
+
+        if (bookIndex >= 0)
+        {
+            viewBookButton.SetActive(true);
+            bookIndex = index;
+        }
     }
 
     public void Show()
@@ -92,5 +108,11 @@ public class EmailContents : MonoBehaviour
 
         Tweener close = DOTweenModuleUI.DOSizeDelta(panel, closedSize, growTime);
         close.Play();
+    }
+
+    public void PublishHeldBook(int marketedDemo)
+    {
+        InkHandler.BookStats bookInfo = InkHandler.inkMan.books[bookIndex];
+        PublishingManager.publishMan.PublishBook(bookInfo.genre, bookInfo.subGenre, bookInfo.isSequel, bookInfo.targetDemo, marketedDemo, bookInfo.quality, bookInfo.title, bookIndex);
     }
 }

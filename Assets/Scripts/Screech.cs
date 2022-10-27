@@ -14,6 +14,8 @@ public class Screech : MonoBehaviour
 
     int timeSincePost = 0;
 
+    float chanceForImage = 10f; //Percent
+
     private void Start()
     {
         InvokeRepeating("UpdateTime", 0, 60f);
@@ -25,6 +27,8 @@ public class Screech : MonoBehaviour
         content.text = contentText;
 
         AudioManager.audioMan.ScreechPosted();
+
+        float chance = Random.Range(0f, 100f);
     }
 
     string PickUsername()

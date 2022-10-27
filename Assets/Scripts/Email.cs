@@ -30,7 +30,9 @@ public class Email : MonoBehaviour
     float startingHeight;
 
     [HideInInspector]
-    public int bookIndex;
+    public string contents;
+
+    int bookIndex;
 
     private void Start()
     {
@@ -44,10 +46,12 @@ public class Email : MonoBehaviour
         rect.sizeDelta = new Vector2(rect.rect.width, startingHeight + expandAmount);
     }
 
-    public void setUp(string authorText, string subjectText)
+    public void setUp(string authorText, string subjectText, string contentSet, int indexSet)
     {
         senderDisplay.text = authorText;
         subjectDisplay.text = subjectText;
+        contents = contentSet;
+        bookIndex = indexSet;
     }
 
     private void Update()
@@ -79,7 +83,7 @@ public class Email : MonoBehaviour
 
     public void Clicked()
     {
-        EmailManager.emailMan.ClickedOnEmail(senderDisplay.text, subjectDisplay.text, bookIndex);
+        EmailManager.emailMan.ClickedOnEmail(senderDisplay.text, subjectDisplay.text, contents, bookIndex);
     }
 
     void UpdateTime()
