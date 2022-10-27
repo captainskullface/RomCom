@@ -18,7 +18,8 @@ public class AudioManager : MonoBehaviour
     AudioClip screechPosted;
 
     AudioSource source;
-    void Start()
+
+    private void Awake()
     {
         source = GetComponent<AudioSource>();
         audioMan = this;
