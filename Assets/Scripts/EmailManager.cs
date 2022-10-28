@@ -20,6 +20,7 @@ public class EmailManager : MonoBehaviour
 
     private void Start()
     {
+
         emailMan = this;
 
         for(int i = 0; i < 20; i++)
