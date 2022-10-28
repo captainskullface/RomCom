@@ -7,6 +7,8 @@ public class InkHandler : MonoBehaviour
 {
     public static InkHandler inkMan;
 
+    public string companyName;
+
     [System.Serializable]
     public class BookStats
     {
@@ -81,7 +83,12 @@ public class InkHandler : MonoBehaviour
             int targetDemo = int.Parse(book.Continue());
             int quality = int.Parse(book.Continue());
 
-            synopsis.Replace(char.Parse("~"), char.Parse("\n"));
+            synopsis = synopsis.Replace("~", "\n");
+
+            subjectLine = subjectLine.Replace("^", companyName);
+
+            emailContents = emailContents.Replace("~", "\n");
+            emailContents = emailContents.Replace("^", companyName);
 
             books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality));
         }
