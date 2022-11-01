@@ -11,6 +11,12 @@ public class statusChange : MonoBehaviour
     //stat effect
     //narrative progression status/personal assistant update
 
+
+
+
+
+
+
     //For tabled books:
     //start internal action point countdown
     // every action made after this counts as +1 countdown timer

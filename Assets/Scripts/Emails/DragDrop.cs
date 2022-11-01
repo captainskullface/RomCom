@@ -12,12 +12,17 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     private RectTransform rectTransform;
     private CanvasGroup itemCanvas;
-
-
+    Vector3 startScale;
+    bool dragged = false;
+    public Animator deletedAnim;
+    public Animator windowAnims;
+   
+ 
     private void Awake() 
     {
-        rectTransform = GetComponent<RectTransform>();
+        rectTransform = gameObject.GetComponent<RectTransform>();
         itemCanvas = GetComponent<CanvasGroup>();
+        startScale = rectTransform.localScale;
     }
 
     //--------------------------------------------------------------------
@@ -25,7 +30,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     //called when obj is first clicked
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        
     }
 
 
@@ -34,16 +39,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData) 
     {
         //good place to put any feedback anims/noises
-
-        itemCanvas.blocksRaycasts = false; //enables the drag
-    }
-
-
-
-    //called after letting go
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        itemCanvas.blocksRaycasts = true;
+        dragged = true;
     }
 
 
@@ -51,6 +47,47 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     //called every frame mid drag
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor; //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
+        rectTransform.anchoredPosition += (eventData.delta / canvas.scaleFactor); //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
+
     }
+
+
+    //called after letting go
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        dragged = false;
+          
+
+    }
+
+    private void Update()
+    {
+
+        if (dragged)
+        {
+            Vector3 zoom = new Vector3(Mathf.Clamp(rectTransform.localScale.x * 0.03f, 95, 108), Mathf.Clamp(rectTransform.localScale.y * 0.03f, 95, 108));
+            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, zoom, 1.2f * Time.deltaTime);
+        }
+
+
+
+        if (!dragged)
+        {
+            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, startScale, 1.2f * Time.deltaTime);
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "delete")
+        {
+            Debug.Log("OMGGGGGG");
+            windowAnims.SetBool("isTrashing", true);
+        }
+    }
+
+
+
+
 }
