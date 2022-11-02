@@ -65,6 +65,8 @@ public class InkHandler : MonoBehaviour
 
         NewEmail(true, 0);
         NewBookPublished(0);
+
+        //companyName = InputName.
     }
 
     void ParseBooks()

@@ -24,9 +24,14 @@ public class ScreecherManager : MonoBehaviour
 
     bool canPost = true;
 
-    private void Start()
+    private void Awake()
     {
         screecherMan = this;
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()
@@ -56,6 +61,7 @@ public class ScreecherManager : MonoBehaviour
 
         GameObject newScreech = Instantiate(screechPrefab);
         newScreech.transform.SetParent(timeLine);
+        newScreech.transform.localScale = Vector3.one;
 
         screeches.Add(newScreech);
 

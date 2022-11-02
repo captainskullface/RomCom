@@ -16,8 +16,8 @@ public class EmailContents : MonoBehaviour
     [SerializeField]
     GameObject viewBookButton;
 
-    float fadeTime = 1;
-    float growTime = 0.75f;
+    float fadeTime = 0.5f;
+    float growTime = 0.375f;
     [SerializeField]
     CanvasGroup contents;
     [SerializeField]
