@@ -86,6 +86,7 @@ public class Email : MonoBehaviour
 
     public void Clicked()
     {
+        Debug.Log(bookIndex);
         EmailManager.emailMan.ClickedOnEmail(senderDisplay.text, subjectDisplay.text, contents, bookIndex);
         normalColor = readColor;
     }

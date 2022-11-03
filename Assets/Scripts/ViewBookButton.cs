@@ -17,6 +17,10 @@ public class ViewBookButton : MonoBehaviour
     Vector2 startingSize;
     Vector2 expandedSize;
     Image image;
+
+    [SerializeField]
+    EmailContents mainEmail;
+    
     private void Start()
     {
         startingSize = transform.localScale;
@@ -53,6 +57,6 @@ public class ViewBookButton : MonoBehaviour
 
     public void Clicked()
     {
-        //Yes
+        mainEmail.ShowSynopsis();
     }
 }
