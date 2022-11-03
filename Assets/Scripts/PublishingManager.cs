@@ -61,6 +61,8 @@ public class PublishingManager : MonoBehaviour
     float losses;
     int booksPublished;
 
+    public string lastPublished;
+
     [Header("UI")]
     [SerializeField]
     TMP_Text currentMoneyDisplay;
@@ -107,6 +109,7 @@ public class PublishingManager : MonoBehaviour
 
         booksPublished++;
 
+        lastPublished = title;
         lastPublishedDisplay.text = title;
         amountPublishedDisplay.text = booksPublished.ToString();
 

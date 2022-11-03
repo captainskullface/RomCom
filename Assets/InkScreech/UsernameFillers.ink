@@ -1,0 +1,26 @@
+{ shuffle:
+-enjoyer
+-theawesome
+-awesome
+-epic
+-swag
+-dabest
+-haver
+-unlimited
+-readsalot
+-likesbooks
+-massivepeen
+-jass
+-wantstogohome
+-issickofthisshit
+-isscared
+-readsmorethanyou
+-whore
+-smoker
+-snorter
+-jones
+-smith
+-matthew
+-fellows
+-swinger
+}

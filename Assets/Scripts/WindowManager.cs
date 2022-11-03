@@ -94,7 +94,7 @@ public class WindowManager : MonoBehaviour
         if (instant)
             animTime = 0.001f;
 
-        float windowRatio = 0.75f;
+        float windowRatio = 0.8f;
 
         if(apps[index].active && !instant)
         {
