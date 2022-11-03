@@ -4,44 +4,56 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Tab : MonoBehaviour
+public class App : MonoBehaviour
 {
     [SerializeField]
     TMP_Text displayText;
 
     WindowManager manager;
 
-    [SerializeField]
-    Color activeColor;
+    //[SerializeField]
+    //Color activeColor;
 
     [SerializeField]
     Color inactiveColor;
 
-    [SerializeField]
-    Color hoverColor;
+    //[SerializeField]
+    //Color hoverColor;
 
     [SerializeField]
     float expandAmount;
 
-    bool active;
+    [HideInInspector]
+    public bool active;
     bool hovering;
     int index;
     RectTransform rect;
     float startingHeight;
+    float startingWidth;
 
     Image image;
 
+    Color textColor;
+    Color hiddenTextColor;
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
         startingHeight = rect.rect.height;
+        startingWidth = rect.rect.width;
         image = GetComponent<Image>();
     }
 
     private void Start()
     {
+        /*
         if (active)
             rect.sizeDelta = new Vector2(rect.rect.width, startingHeight + expandAmount);
+        */
+
+        textColor = displayText.color;
+        hiddenTextColor = new Color(textColor.r, textColor.g, textColor.b, 0);
+
+        displayText.color = hiddenTextColor;
     }
 
     public void Setup(string displayName, int indexSet, WindowManager man)
@@ -54,21 +66,39 @@ public class Tab : MonoBehaviour
     private void Update()
     {
         float targetHeight = startingHeight;
+        float targetWidth = startingWidth;
 
-        if (hovering || active)
+        if (hovering)
+        {
+            targetWidth = startingWidth + expandAmount;
             targetHeight = startingHeight + expandAmount;
+        }
+            
 
-        Vector2 targetVector = new Vector2(rect.rect.width, targetHeight);
+        Vector2 targetVector = new Vector2(targetWidth, targetHeight);
         rect.sizeDelta = Vector2.MoveTowards(rect.sizeDelta, targetVector, Time.deltaTime * 100);
 
+        //Color targetColor = inactiveColor;
         Color targetColor = inactiveColor;
 
+        Color targetTextColor = hiddenTextColor;
+
+        /*
         if (active)
             targetColor = activeColor;
         else if (hovering)
             targetColor = hoverColor;
+        */
 
-        image.color = Vector4.MoveTowards(image.color, targetColor, Time.deltaTime);
+        if (hovering)
+            targetColor = Color.white;
+
+        if (hovering)
+            targetTextColor = textColor;
+
+        image.color = Vector4.MoveTowards(image.color, targetColor, Time.deltaTime * 5);
+
+        displayText.color = Vector4.MoveTowards(displayText.color, targetTextColor, Time.deltaTime * 5);
     }
 
     public void Hover()
@@ -82,8 +112,7 @@ public class Tab : MonoBehaviour
 
     public void Clicked()
     {
-        manager.SwitchTo(index);
-        active = true;
+        manager.ClickApp(index);
     }
 
     public void Activate()
