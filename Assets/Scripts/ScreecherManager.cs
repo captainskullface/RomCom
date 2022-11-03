@@ -24,14 +24,23 @@ public class ScreecherManager : MonoBehaviour
 
     bool canPost = true;
 
+    [SerializeField]
+    List<Sprite> possibleImages = new List<Sprite>();
+
+    List<Sprite> imageBank = new List<Sprite>();
+
+    [SerializeField]
+    float chanceForImage = 25f; //Percent
+
     private void Awake()
     {
         screecherMan = this;
+        imageBank.AddRange(possibleImages);
     }
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
@@ -40,7 +49,17 @@ public class ScreecherManager : MonoBehaviour
             return;
 
         if (canPost)
-            makeScreech(onDeck[0]);
+        {
+            bool forceImage = false;
+
+            if (onDeck[0].Contains("/"))
+            {
+                onDeck[0] = onDeck[0].Replace("/", "");
+                forceImage = true;
+            }
+
+            makeScreech(onDeck[0], forceImage);
+        }  
     }
 
     IEnumerator CoolDown()
@@ -52,10 +71,12 @@ public class ScreecherManager : MonoBehaviour
 
     public void newScreech(string content)
     {
+        content = InkHandler.ProcessText(content);
+            
         onDeck.Add(content);
     }
 
-    void makeScreech(string content)
+    void makeScreech(string content, bool forceImage = false)
     {
         StartCoroutine(CoolDown());
 
@@ -66,8 +87,27 @@ public class ScreecherManager : MonoBehaviour
         screeches.Add(newScreech);
 
         Screech screechLogic = newScreech.GetComponent<Screech>();
-        screechLogic.setUp(content);
+
+        Sprite imageSet = null;
+
+        float chance = Random.Range(0, 100);
+        if (chance < chanceForImage || forceImage)
+        {
+            int index = Random.Range(0, possibleImages.Count);
+            imageSet = possibleImages[index];
+            possibleImages.RemoveAt(index);
+
+            if (possibleImages.Count == 0)
+                ResetImages();
+        }
+
+        screechLogic.setUp(content, imageSet);
 
         onDeck.Remove(onDeck[0]);
+    }
+
+    void ResetImages()
+    {
+        possibleImages.AddRange(imageBank);
     }
 }

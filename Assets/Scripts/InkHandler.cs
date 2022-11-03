@@ -9,6 +9,18 @@ public class InkHandler : MonoBehaviour
 
     public string companyName;
 
+    [SerializeField]
+    Vector2 newBookInterval;
+
+    [SerializeField]
+    Vector2 randomEmailInterval;
+
+    [SerializeField]
+    Vector2 randomScreechInterval;
+    
+    [SerializeField, Tooltip("This is a tuning variable so that the rate of everything can be increased with one value")]
+    float gameSpeed;
+
     [System.Serializable]
     public class BookStats
     {
@@ -50,8 +62,12 @@ public class InkHandler : MonoBehaviour
     [SerializeField]
     List<TextAsset> screechBanks = new List<TextAsset>();
 
+    public TextAsset usernameStarters;
+    public TextAsset usernameFillers;
+
     [SerializeField]
     TextAsset randomScreeches;
+    Story randScreeches;
 
     //Story story;
     //Story random;
@@ -63,10 +79,36 @@ public class InkHandler : MonoBehaviour
 
         ParseBooks();
 
-        NewEmail(true, 0);
-        NewBookPublished(0);
-
         //companyName = InputName.
+
+        randScreeches = new Story(randomScreeches.text);
+
+        StartCoroutine(BookFlow());
+        StartCoroutine(SpamMailFlow());
+        StartCoroutine(RandomScreechFlow());
+    }
+
+    IEnumerator BookFlow()
+    {
+        yield return new WaitForSeconds(Random.Range(newBookInterval.x, newBookInterval.y) * gameSpeed);
+        int bookSelect = Random.Range(0, books.Count);
+        NewEmail(true, bookSelect);
+        StartCoroutine(BookFlow());
+    }
+
+    IEnumerator SpamMailFlow()
+    {
+        yield return new WaitForSeconds(Random.Range(randomEmailInterval.x, randomEmailInterval.y) * gameSpeed);
+        int emailSelect = Random.Range(0, randomEmails.Count);
+        NewEmail(false, emailSelect);
+        StartCoroutine(SpamMailFlow());
+    }
+
+    IEnumerator RandomScreechFlow()
+    {
+        yield return new WaitForSeconds(Random.Range(randomScreechInterval.x, randomScreechInterval.y) * gameSpeed);
+        RandomScreech();
+        StartCoroutine(RandomScreechFlow());
     }
 
     void ParseBooks()
@@ -85,12 +127,11 @@ public class InkHandler : MonoBehaviour
             int targetDemo = int.Parse(book.Continue());
             int quality = int.Parse(book.Continue());
 
-            synopsis = synopsis.Replace("~", "\n");
+            synopsis = ProcessText(synopsis);
 
-            subjectLine = subjectLine.Replace("^", companyName);
+            subjectLine = ProcessText(subjectLine);
 
-            emailContents = emailContents.Replace("~", "\n");
-            emailContents = emailContents.Replace("^", companyName);
+            emailContents = ProcessText(subjectLine);
 
             books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality));
         }
@@ -138,10 +179,24 @@ public class InkHandler : MonoBehaviour
             string screech = screeches.Continue();
             ScreecherManager.screecherMan.newScreech(screech);
         }
+
+        books.RemoveAt(index);
+        screechBanks.RemoveAt(index);
     }
 
     void RandomScreech()
     {
+        if (!randScreeches.canContinue)
+            randScreeches.ResetCallstack();
+        ScreecherManager.screecherMan.newScreech(randScreeches.Continue() +"/");
+    }
 
+    public static string ProcessText(string entry)
+    {
+        entry = entry.Replace("~", "\n");
+        entry = entry.Replace("^", InkHandler.inkMan.companyName);
+        entry = entry.Replace("$", "#");
+        entry = entry.Replace("*", PublishingManager.publishMan.lastPublished);
+        return entry;
     }
 }

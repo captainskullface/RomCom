@@ -21,6 +21,9 @@ public class Email : MonoBehaviour
     Color hoverColor;
 
     [SerializeField]
+    Color readColor;
+
+    [SerializeField]
     float expandAmount;
 
     bool hovering;
@@ -84,6 +87,7 @@ public class Email : MonoBehaviour
     public void Clicked()
     {
         EmailManager.emailMan.ClickedOnEmail(senderDisplay.text, subjectDisplay.text, contents, bookIndex);
+        normalColor = readColor;
     }
 
     void UpdateTime()
