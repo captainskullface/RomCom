@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1146
+  controlID: 4342
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1147
+  controlID: 4343
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1148
+  controlID: 4344
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 407.72998, y: 372.62747, z: -3.7503295}
+    m_Target: {x: 236.02603, y: 455.43338, z: 696.65344}
     speed: 2
-    m_Value: {x: 407.72998, y: 372.62747, z: -3.7503295}
+    m_Value: {x: 236.02603, y: 455.43338, z: 696.65344}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -493,9 +493,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 518.6975
+    m_Target: 1078.9663
     speed: 2
-    m_Value: 518.6975
+    m_Value: 1078.9663
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1063
+  controlID: 4290
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e610000
-      m_LastClickedID: 24926
-      m_ExpandedIDs: 22fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: eae8ffff04ecffff14f0ffff22fbfffffc8100001a8200003a8200003e82000060820000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -722,22 +722,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/ernabalayan/Desktop/RomCom2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5e620000
-    m_LastClickedID: 25182
-    m_ExpandedIDs: 00000000286200002a6200002c6200002e620000306200003262000000ca9a3b
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: 60620000
+    m_LastClickedID: 25184
+    m_ExpandedIDs: 00000000286200002a6200002c6200002e62000030620000326200005e62000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -790,9 +790,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5e610000
-    m_LastClickedInstanceID: 24926
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000007c0000727c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
