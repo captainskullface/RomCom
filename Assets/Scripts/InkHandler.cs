@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using System.Linq;
 
 public class InkHandler : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class InkHandler : MonoBehaviour
     Vector2 newBookInterval;
 
     [SerializeField]
+    Vector2 followUpEmailDelayRange;
+
+    [SerializeField]
     Vector2 randomEmailInterval;
 
     [SerializeField]
@@ -21,9 +25,15 @@ public class InkHandler : MonoBehaviour
     [SerializeField, Tooltip("This is a tuning variable so that the rate of everything can be increased with one value")]
     float gameSpeed;
 
+    List<string> randomScreechBank = new List<string>();
+    List<string> availableRandomScreech = new List<string>();
+
+    int booksDone = 0;
+
     [System.Serializable]
     public class BookStats
     {
+        public bool published;
         public string title;
         public string author;
         public string subjectLine;
@@ -34,7 +44,9 @@ public class InkHandler : MonoBehaviour
         public int isSequel;
         public int targetDemo;
         public int quality;
-        public BookStats(string _title, string _author, string _subjectLine, string _emailContents, string _synopsis, int _genre, int _subGenre, int _isSequel, int _targetDemo, int _quality)
+        public TextAsset associatedScreeches;
+        public TextAsset followUpEmail;
+        public BookStats(string _title, string _author, string _subjectLine, string _emailContents, string _synopsis, int _genre, int _subGenre, int _isSequel, int _targetDemo, int _quality, TextAsset _associatedScreeches, TextAsset _followUpEmail)
         {
             title = _title;
             author = _author;
@@ -46,8 +58,9 @@ public class InkHandler : MonoBehaviour
             isSequel = _isSequel;
             targetDemo = _targetDemo;
             quality = _quality;
+            associatedScreeches = _associatedScreeches;
+            followUpEmail = _followUpEmail;
         }
-
     }
 
     [SerializeField]
@@ -57,17 +70,19 @@ public class InkHandler : MonoBehaviour
     List<TextAsset> bookData = new List<TextAsset>();
 
     [SerializeField]
-    List<TextAsset> randomEmails = new List<TextAsset>();
+    List<TextAsset> followUpEmails = new List<TextAsset>();
 
     [SerializeField]
-    List<TextAsset> screechBanks = new List<TextAsset>();
+    List<TextAsset> bookScreeches = new List<TextAsset>();
+
+    [SerializeField]
+    List<TextAsset> randomEmails = new List<TextAsset>();
 
     public TextAsset usernameStarters;
     public TextAsset usernameFillers;
 
     [SerializeField]
     TextAsset randomScreeches;
-    Story randScreeches;
 
     //Story story;
     //Story random;
@@ -79,21 +94,30 @@ public class InkHandler : MonoBehaviour
 
         ParseBooks();
 
-        //companyName = InputName.
-
-        randScreeches = new Story(randomScreeches.text);
+        //companyName =InputName
 
         StartCoroutine(BookFlow());
         StartCoroutine(SpamMailFlow());
         StartCoroutine(RandomScreechFlow());
+
+        Story randScreeches = new Story(randomScreeches.text); ;
+
+        while (randScreeches.canContinue)
+        {
+            string screech = randScreeches.Continue();
+            randomScreechBank.Add(screech);
+        }
+        availableRandomScreech.AddRange(randomScreechBank);
     }
 
     IEnumerator BookFlow()
     {
         yield return new WaitForSeconds(Random.Range(newBookInterval.x, newBookInterval.y) * gameSpeed);
-        int bookSelect = Random.Range(0, books.Count);
+        int bookSelect = booksDone;
+        booksDone++;
         NewEmail(true, bookSelect);
-        StartCoroutine(BookFlow());
+        if(booksDone < books.Count - 1)
+            StartCoroutine(BookFlow());
     }
 
     IEnumerator SpamMailFlow()
@@ -126,17 +150,20 @@ public class InkHandler : MonoBehaviour
             int isSequel = int.Parse(book.Continue());
             int targetDemo = int.Parse(book.Continue());
             int quality = int.Parse(book.Continue());
+            TextAsset screeches = bookScreeches[i];
+            TextAsset followUp = followUpEmails[i];
 
             synopsis = ProcessText(synopsis);
 
             subjectLine = ProcessText(subjectLine);
 
-            emailContents = ProcessText(subjectLine);
+            emailContents = ProcessText(emailContents);
 
-            books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality));
+            books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality, screeches, followUp));
         }
 
-        books.Reverse();
+        books.Shuffle();
+        //books.Reverse();
     }
 
     public void NewEmail(bool isBook, int index)
@@ -159,6 +186,22 @@ public class InkHandler : MonoBehaviour
         }
     }
 
+    IEnumerator FollowUpEmail(int index)
+    {
+        yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y));
+        StoryEmail(books[index].followUpEmail);
+    }
+
+    void StoryEmail(TextAsset emailText)
+    {
+        Story email = new Story(emailText.text);
+        string sender = email.Continue();
+        string subject = email.Continue();
+        string contents = email.Continue();
+
+        EmailManager.emailMan.newEmail(sender, subject, contents);
+    }
+
     public void NewBookPublished(int index)
     {
         /*
@@ -173,22 +216,34 @@ public class InkHandler : MonoBehaviour
         }
         */
 
-        Story screeches = new Story(screechBanks[index].text);
+        Story screeches = new Story(books[index].associatedScreeches.text);
         while(screeches.canContinue)
         {
             string screech = screeches.Continue();
             ScreecherManager.screecherMan.newScreech(screech);
         }
 
-        books.RemoveAt(index);
-        screechBanks.RemoveAt(index);
+        StartCoroutine(FollowUpEmail(index));
+
+        //books.RemoveAt(index);
+        //screechBanks.RemoveAt(index);
     }
 
     void RandomScreech()
     {
+        /*
         if (!randScreeches.canContinue)
             randScreeches.ResetCallstack();
         ScreecherManager.screecherMan.newScreech(randScreeches.Continue() +"/");
+        */
+        int index = Random.Range(0, availableRandomScreech.Count);
+        string rand = availableRandomScreech[index];
+        availableRandomScreech.RemoveAt(index);
+
+        if (availableRandomScreech.Count == 0)
+            availableRandomScreech.AddRange(randomScreechBank);
+
+        ScreecherManager.screecherMan.newScreech(rand + "/");
     }
 
     public static string ProcessText(string entry)
