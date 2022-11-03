@@ -63,6 +63,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         open = true;
 
+        rect.position = new Vector3(Screen.width / 2, Screen.height / 2);
+
         transform.SetAsLastSibling();
         contents.text = containedText;
         Tweener show = rect.DOScale(Vector3.one, animTime);
