@@ -22,3 +22,18 @@ i love streaming new streaming-exclusive tv shows on nonspecific streaming servi
 do you think kideo hojima is going to expand into the book publishing industry 
 there is a deer on my porch and its standing like a human
 go piss girl
+saturdays are for the boys.
+wood fired pizza? How is pizza gonna get a job now??
+look at all these chickens
+pronounce champagne like lasagna
+you're telling me a shrimp fried this rice?!?!?
+its bobst not bobst motherfuckers
+manspreading is gay
+my uber ride is here:
+if my sleep paralysis demon saw this, I think it would shit itself 
+he might be a felon but he's the reason I felon love
+was Karl Marx a communist??
+
+
+
+
