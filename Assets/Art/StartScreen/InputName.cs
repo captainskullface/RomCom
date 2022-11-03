@@ -64,8 +64,7 @@ public class InputName : MonoBehaviour
 
             yield return new WaitForSeconds(loadingTime);
 
-            //if (loadingBar.value == loadingBar.maxValue)
-              //  break;
+        
         }
     }
 

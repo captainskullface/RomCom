@@ -887,7 +887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hint: This will be your publishing company name'
+  m_text: 'Hint: This will be the name of your publishing company'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f325a5edce48a41519dbdbb639299ac1, type: 2}
   m_sharedMaterial: {fileID: 1878783537066059102, guid: f325a5edce48a41519dbdbb639299ac1, type: 2}
@@ -1083,7 +1083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.65, y: -108}
+  m_AnchoredPosition: {x: -90, y: -112}
   m_SizeDelta: {x: 115.7, y: 30.002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913861351
@@ -1115,8 +1115,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289762145
-  m_fontColor: {r: 0.38007298, g: 0.57654494, b: 0.6886792, a: 1}
+    rgba: 4290356584
+  m_fontColor: {r: 0.40775186, g: 0.6485197, b: 0.7264151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34
-  m_fontSizeBase: 34
+  m_fontSize: 31
+  m_fontSizeBase: 31
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

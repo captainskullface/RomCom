@@ -141,6 +141,9 @@ MonoBehaviour:
 =======
     width: 1470
     height: 826
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -197,6 +200,9 @@ MonoBehaviour:
 --- !u!114 &3
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,9 +220,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 760.8
     width: 1536
 =======
+=======
+>>>>>>> BasicUI
     y: 806
     width: 1470
 >>>>>>> BasicUI
@@ -225,6 +234,11 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
 <<<<<<< HEAD
 --- !u!114 &8
+<<<<<<< HEAD
+=======
+=======
+--- !u!114 &5
+>>>>>>> BasicUI
 =======
 --- !u!114 &5
 MonoBehaviour:
@@ -335,6 +349,9 @@ MonoBehaviour:
 --- !u!114 &6
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -349,10 +366,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 7}
   - {fileID: 10}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
   - {fileID: 10}
   - {fileID: 13}
 =======
@@ -368,16 +388,22 @@ MonoBehaviour:
   - {fileID: 8}
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1096.8
     height: 730.8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
     width: 1105.5
     height: 776
   m_MinSize: {x: 200, y: 200}
@@ -399,6 +425,9 @@ MonoBehaviour:
 =======
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -413,10 +442,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 8}
   - {fileID: 9}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
   - {fileID: 11}
   - {fileID: 12}
 =======
@@ -429,16 +461,22 @@ MonoBehaviour:
   m_Children: []
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1096.8
     height: 454.4
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
     width: 1105.5
     height: 460
   m_MinSize: {x: 200, y: 100}
@@ -460,6 +498,9 @@ MonoBehaviour:
 =======
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -477,6 +518,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 272
     height: 454.4
@@ -498,6 +540,17 @@ MonoBehaviour:
   - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    width: 546
+    height: 460
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> BasicUI
 <<<<<<< HEAD
 --- !u!114 &12
 =======
@@ -511,6 +564,9 @@ MonoBehaviour:
 --- !u!114 &9
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -527,6 +583,9 @@ MonoBehaviour:
 =======
 <<<<<<< Updated upstream
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: SceneView
@@ -534,6 +593,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 272
     y: 0
@@ -551,6 +611,10 @@ MonoBehaviour:
 =======
     x: 546
     y: 0
+=======
+    x: 546
+    y: 0
+>>>>>>> BasicUI
 <<<<<<< HEAD
     width: 559.5
     height: 460
@@ -631,6 +695,9 @@ MonoBehaviour:
 --- !u!114 &10
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -646,6 +713,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 454.4
@@ -669,6 +737,16 @@ MonoBehaviour:
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 21}
   m_Panes:
+=======
+    x: 367.5
+    y: 0
+    width: 738
+    height: 316
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+>>>>>>> BasicUI
   - {fileID: 21}
   - {fileID: 22}
   m_Selected: 0
@@ -697,6 +775,9 @@ MonoBehaviour:
 --- !u!114 &11
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -712,6 +793,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 1096.8
     y: 0
@@ -731,6 +813,16 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
+=======
+    x: 1105.5
+    y: 0
+    width: 364.5
+    height: 776
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 23}
+  m_Panes:
+>>>>>>> BasicUI
 <<<<<<< HEAD
   - {fileID: 23}
   m_Selected: 0
@@ -808,15 +900,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 272
     y: 73.6
     width: 822.80005
     height: 433.4
 =======
+=======
+>>>>>>> BasicUI
     x: 546
     y: 95
     width: 557.5
     height: 439
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -844,15 +942,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -768
     m_HBaseRangeMax: 768
     m_VBaseRangeMin: -432
     m_VBaseRangeMax: 432
 =======
+=======
+>>>>>>> BasicUI
     m_HBaseRangeMin: -278.75
     m_HBaseRangeMax: 278.75
     m_VBaseRangeMin: -156.75
     m_VBaseRangeMax: 156.75
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -872,15 +976,21 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 822.80005
       height: 412.4
     m_Scale: {x: 0.4773148, y: 0.4773148}
     m_Translation: {x: 411.40002, y: 206.2}
 =======
+=======
+>>>>>>> BasicUI
       width: 557.5
       height: 418
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 278.75, y: 209}
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -888,6 +998,7 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -861.905
       y: -432
@@ -905,14 +1016,26 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1115, y: 878}
 >>>>>>> BasicUI
+=======
+      x: -278.75
+      y: -209
+      width: 557.5
+      height: 418
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1115, y: 878}
+>>>>>>> BasicUI
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
 --- !u!114 &19
 =======
 =======
@@ -1106,6 +1229,9 @@ MonoBehaviour:
 =======
 --- !u!114 &15
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1127,15 +1253,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 272
     y: 73.6
     width: 822.80005
     height: 433.4
 =======
+=======
+>>>>>>> BasicUI
     x: 0
     y: 95
     width: 545
     height: 439
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1147,7 +1279,11 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       snapOffset: {x: -100, y: -25.600006}
+=======
+      snapOffset: {x: 0, y: 0}
+>>>>>>> BasicUI
 =======
       snapOffset: {x: 0, y: 0}
 >>>>>>> BasicUI
@@ -1365,11 +1501,14 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 973.5919, y: 714.5852, z: -29.445818}
     speed: 2
     m_Value: {x: 973.5919, y: 714.5852, z: -29.445818}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
     m_Target: {x: 407.72998, y: 372.62747, z: -3.7503295}
     speed: 2
     m_Value: {x: 407.72998, y: 372.62747, z: -3.7503295}
@@ -1384,6 +1523,9 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0}
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_RenderMode: 0
   m_CameraMode:
@@ -1436,11 +1578,14 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 1081.486
     speed: 2
     m_Value: 1081.486
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
     m_Target: 518.6975
     speed: 2
     m_Value: 518.6975
@@ -1455,6 +1600,9 @@ MonoBehaviour:
     m_Value: 10
 >>>>>>> Stashed changes
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_Ortho:
     m_Target: 1
@@ -1481,8 +1629,11 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &15
 =======
+=======
+>>>>>>> BasicUI
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1541,6 +1692,9 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &21
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1562,15 +1716,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 528
     width: 1095.8
     height: 255.4
 =======
+=======
+>>>>>>> BasicUI
     x: 367.5
     y: 555
     width: 736
     height: 295
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1602,15 +1762,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 84640000
     m_LastClickedID: 25732
     m_ExpandedIDs: 000000006664000000ca9a3bffffff7f
 =======
+=======
+>>>>>>> BasicUI
     scrollPos: {x: 0, y: 29}
     m_SelectedIDs: 32640000
     m_LastClickedID: 25650
     m_ExpandedIDs: 000000002464000026640000306400004a640000da6a0000a67b0000da7b000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1640,7 +1806,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000006664000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 0000000024640000266400004a640000da6a0000a67b0000da7b000000ca9a3b
+>>>>>>> BasicUI
 =======
     m_ExpandedIDs: 0000000024640000266400004a640000da6a0000a67b0000da7b000000ca9a3b
 >>>>>>> BasicUI
@@ -1700,9 +1870,12 @@ MonoBehaviour:
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &16
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> BasicUI
 --- !u!114 &22
 =======
 =======
@@ -1789,6 +1962,9 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 --- !u!114 &17
 >>>>>>> BasicUI
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1810,22 +1986,32 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 528
     width: 1095.8
     height: 255.4
 =======
+=======
+>>>>>>> BasicUI
     x: 2249
     y: 726.5
     width: 920
     height: 250
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &17
+=======
+--- !u!114 &23
+>>>>>>> BasicUI
 =======
 --- !u!114 &23
 >>>>>>> BasicUI
@@ -1849,15 +2035,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1096.8
     y: 73.6
     width: 438.19995
     height: 709.8
 =======
+=======
+>>>>>>> BasicUI
     x: 1105.5
     y: 95
     width: 363.5
     height: 755
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

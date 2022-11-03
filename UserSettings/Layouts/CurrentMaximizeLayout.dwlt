@@ -33,6 +33,9 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
   controlID: 1146
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 --- !u!114 &2
 MonoBehaviour:
@@ -64,6 +67,9 @@ MonoBehaviour:
     y: 95
     width: 557.5
     height: 438
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -121,6 +127,9 @@ MonoBehaviour:
       height: 417
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 278.75, y: 208.5}
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -144,6 +153,9 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1115, y: 876}
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -183,6 +195,9 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
   controlID: 1147
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 --- !u!114 &4
 MonoBehaviour:
@@ -217,6 +232,9 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 1148
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 --- !u!114 &5
 MonoBehaviour:
@@ -241,6 +259,9 @@ MonoBehaviour:
 =======
     width: 546
     height: 459
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -363,6 +384,9 @@ MonoBehaviour:
     y: 95
     width: 545
     height: 438
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -588,9 +612,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 785.2442, y: 59.882557, z: -6.199793}
     speed: 2
     m_Value: {x: 785.2442, y: 59.882557, z: -6.199793}
+=======
+    m_Target: {x: 407.72998, y: 372.62747, z: -3.7503295}
+    speed: 2
+    m_Value: {x: 407.72998, y: 372.62747, z: -3.7503295}
+>>>>>>> BasicUI
 =======
     m_Target: {x: 407.72998, y: 372.62747, z: -3.7503295}
     speed: 2
@@ -647,9 +677,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 462.94498
     speed: 2
     m_Value: 462.94498
+=======
+    m_Target: 518.6975
+    speed: 2
+    m_Value: 518.6975
+>>>>>>> BasicUI
 =======
     m_Target: 518.6975
     speed: 2
@@ -732,6 +768,9 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 1063
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
 --- !u!114 &9
 MonoBehaviour:
@@ -884,6 +923,9 @@ MonoBehaviour:
     y: 554
     width: 736
     height: 294
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -903,7 +945,11 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scripts
+=======
+    - Assets
+>>>>>>> BasicUI
 =======
     - Assets
 >>>>>>> BasicUI
@@ -913,7 +959,11 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Scripts
+=======
+  - Assets
+>>>>>>> BasicUI
 =======
   - Assets
 >>>>>>> BasicUI
@@ -923,15 +973,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 84640000
     m_LastClickedID: 25732
     m_ExpandedIDs: 00000000666400008864000000ca9a3bffffff7f
 =======
+=======
+>>>>>>> BasicUI
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 5e620000
     m_LastClickedID: 25182
     m_ExpandedIDs: 00000000286200002a6200002c6200002e620000306200003262000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -961,7 +1017,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000066640000
+=======
+    m_ExpandedIDs: 00000000286200002a6200002c6200002e620000306200003262000000ca9a3b
+>>>>>>> BasicUI
 =======
     m_ExpandedIDs: 00000000286200002a6200002c6200002e620000306200003262000000ca9a3b
 >>>>>>> BasicUI
@@ -990,11 +1050,14 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: e4820000
     m_LastClickedInstanceID: 33508
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
 =======
+=======
+>>>>>>> BasicUI
     m_SelectedInstanceIDs: 5e610000
     m_LastClickedInstanceID: 24926
     m_HadKeyboardFocusLastEvent: 0
@@ -1119,6 +1182,9 @@ MonoBehaviour:
     y: 95
     width: 363.5
     height: 753
+<<<<<<< HEAD
+>>>>>>> BasicUI
+=======
 >>>>>>> BasicUI
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
