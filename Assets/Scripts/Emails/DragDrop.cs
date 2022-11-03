@@ -10,7 +10,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     [SerializeField] private Canvas canvas; //canvas that ui element will be displayed on
 
-    private RectTransform rectTransform;
+    private RectTransform rect;
     private CanvasGroup itemCanvas;
     Vector3 startScale;
     bool dragged = false;
@@ -20,9 +20,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
  
     private void Awake() 
     {
-        rectTransform = gameObject.GetComponent<RectTransform>();
+        rect = gameObject.GetComponent<RectTransform>();
         itemCanvas = GetComponent<CanvasGroup>();
-        startScale = rectTransform.localScale;
+        startScale = rect.localScale;
     }
 
     //--------------------------------------------------------------------
@@ -47,7 +47,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     //called every frame mid drag
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += (eventData.delta / canvas.scaleFactor); //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
+        rect.anchoredPosition += (eventData.delta / canvas.scaleFactor); //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
 
     }
 
@@ -56,8 +56,30 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData)
     {
         dragged = false;
-          
 
+        float edge = 50;
+
+        Vector3 adjustedPos = rect.anchoredPosition;
+        Vector3 rectSize = rect.rect.size * rect.localScale.x;
+
+        if (rect.anchoredPosition.x > (Screen.width - edge + (rectSize.x / 2)))
+        {
+            adjustedPos = new Vector3(Screen.width + ((rectSize.x / 2) - (edge - 5)), adjustedPos.y, adjustedPos.z);
+        }
+        else if (rect.anchoredPosition.x < edge - (rectSize.x / 2))
+        {
+            adjustedPos = new Vector3((edge + 5) - (rectSize.x / 2), adjustedPos.y, adjustedPos.z);
+        }
+
+        if (rect.anchoredPosition.y > 0)
+        {
+            adjustedPos = new Vector3(adjustedPos.x, 0 - 5, adjustedPos.z);
+        }
+        else if (rect.anchoredPosition.y < -Screen.height + (edge * 4))
+        {
+            adjustedPos = new Vector3(adjustedPos.x, -Screen.height + ((edge * 4) + 5), adjustedPos.z);
+        }
+        rect.anchoredPosition = adjustedPos;
     }
 
     private void Update()
@@ -65,15 +87,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
         if (dragged)
         {
-            Vector3 zoom = new Vector3(Mathf.Clamp(rectTransform.localScale.x * 0.03f, 95, 108), Mathf.Clamp(rectTransform.localScale.y * 0.03f, 95, 108));
-            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, zoom, 1.2f * Time.deltaTime);
+            Vector3 zoom = new Vector3(Mathf.Clamp(rect.localScale.x * 0.03f, 1.1f, 108), Mathf.Clamp(rect.localScale.y * 0.03f, 1.1f, 108));
+            rect.localScale = Vector3.MoveTowards(rect.localScale, zoom, 10f * Time.deltaTime);
         }
-
-
-
-        if (!dragged)
+        else if(!dragged)
         {
-            rectTransform.localScale = Vector3.Lerp(rectTransform.localScale, startScale, 1.2f * Time.deltaTime);
+            rect.localScale = Vector3.MoveTowards(rect.localScale, startScale, 10f * Time.deltaTime);
         }
     }
 

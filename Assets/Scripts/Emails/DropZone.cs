@@ -12,7 +12,7 @@ public class DropZone : MonoBehaviour, IDropHandler
     {
        if (eventData.pointerDrag != null) // if the dragged obj exists, set the dragged objs pos to this game object's pos
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<Transform>().localPosition;
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<RectTransform>().anchoredPosition;
         }
     }
 }
