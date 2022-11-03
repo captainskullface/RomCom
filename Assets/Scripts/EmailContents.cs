@@ -12,6 +12,8 @@ public class EmailContents : MonoBehaviour
     TMP_Text subjectDisplay;
     [SerializeField]
     TMP_Text contentDisplay;
+    [SerializeField]
+    DragDrop synopsisHolder;
 
     [SerializeField]
     GameObject viewBookButton;
@@ -54,16 +56,21 @@ public class EmailContents : MonoBehaviour
 
     public void Setup(string sender, string subject, string contents, int index)
     {
-        senderDisplay.text = sender;
-        subjectDisplay.text = subject;
-        contentDisplay.text = contents;
+        senderDisplay.text = InkHandler.ProcessText(sender);
+        subjectDisplay.text = InkHandler.ProcessText(subject);
+        contentDisplay.text = InkHandler.ProcessText(contents);
 
-        bookSynopsis = InkHandler.inkMan.books[index].synopsis;
+        bookIndex = index;
+
+        viewBookButton.SetActive(false);
 
         if (bookIndex >= 0)
         {
-            viewBookButton.SetActive(true);
-            bookIndex = index;
+            if (!InkHandler.inkMan.books[bookIndex].published && !InkHandler.inkMan.books[bookIndex].rejected)
+            {
+                bookSynopsis = InkHandler.inkMan.books[index].synopsis;
+                viewBookButton.SetActive(true);
+            }
         }
     }
 
@@ -103,6 +110,8 @@ public class EmailContents : MonoBehaviour
 
     void HideSelf()
     {
+        synopsisHolder.TurnOff();
+
         Tweener uncover = DOTweenModuleUI.DOFade(self, 0, growTime);
         uncover.Play();
 
@@ -114,5 +123,15 @@ public class EmailContents : MonoBehaviour
     {
         InkHandler.BookStats bookInfo = InkHandler.inkMan.books[bookIndex];
         PublishingManager.publishMan.PublishBook(bookInfo.genre, bookInfo.subGenre, bookInfo.isSequel, bookInfo.targetDemo, marketedDemo, bookInfo.quality, bookInfo.title, bookIndex);
+    }
+
+    public void RejectHeldBook()
+    {
+        InkHandler.inkMan.books[bookIndex].rejected = true;
+    }
+    public void ShowSynopsis()
+    {
+        if(!InkHandler.inkMan.books[bookIndex].published)
+            synopsisHolder.TurnOn(bookSynopsis);
     }
 }

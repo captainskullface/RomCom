@@ -10,6 +10,12 @@ public class Window : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     Vector2 windowSize;
 
+    [SerializeField]
+    bool draggable;
+
+    [SerializeField]
+    bool useMySize;
+
     bool dragged;
 
     private void Awake()
@@ -20,7 +26,10 @@ public class Window : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     private void Start()
     {
         rect = GetComponent<RectTransform>();
-        windowSize = new Vector2(Screen.width, Screen.height);
+        if (useMySize)
+            windowSize = new Vector2(rect.rect.width, rect.rect.height);
+        else
+            windowSize = new Vector2(Screen.width, Screen.height);
     }
 
     void Update()
@@ -48,6 +57,8 @@ public class Window : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     //called every frame mid drag
     public void OnDrag(PointerEventData eventData)
     {
+        if (!draggable)
+            return;
         //rect.anchoredPosition += (eventData.delta / canvas.scaleFactor); //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
         rect.anchoredPosition += (eventData.delta); //moves the rectPos along with the .delta (how the mouse has moved since the last frame) / the scale of the canvas
     }

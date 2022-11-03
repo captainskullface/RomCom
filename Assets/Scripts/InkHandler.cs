@@ -34,6 +34,7 @@ public class InkHandler : MonoBehaviour
     public class BookStats
     {
         public bool published;
+        public bool rejected;
         public string title;
         public string author;
         public string subjectLine;
@@ -188,7 +189,7 @@ public class InkHandler : MonoBehaviour
 
     IEnumerator FollowUpEmail(int index)
     {
-        yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y));
+        yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y) * gameSpeed);
         StoryEmail(books[index].followUpEmail);
     }
 
@@ -215,6 +216,8 @@ public class InkHandler : MonoBehaviour
             ScreecherManager.screecherMan.newScreech(screeches[i]);
         }
         */
+
+        books[index].published = true;
 
         Story screeches = new Story(books[index].associatedScreeches.text);
         while(screeches.canContinue)
