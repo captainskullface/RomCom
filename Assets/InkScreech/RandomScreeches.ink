@@ -24,7 +24,6 @@ there is a deer on my porch and its standing like a human
 go piss girl
 saturdays are for the boys.
 wood fired pizza? How is pizza gonna get a job now??
-look at all these chickens
 pronounce champagne like lasagna
 you're telling me a shrimp fried this rice?!?!?
 its bobst not bobst motherfuckers
@@ -33,6 +32,14 @@ my uber ride is here:
 if my sleep paralysis demon saw this, I think it would shit itself 
 he might be a felon but he's the reason I felon love
 was Karl Marx a communist??
+I hate everything about this 
+When is the Game Center gonna get a decent paint job
+Chive Davis $chivychive
+I need 5 minutes without thinking about the Clive Davis institute 
+I would rather sit on a hot grill than take game studies again
+pov: ur in Tandon
+
+
 
 
 
