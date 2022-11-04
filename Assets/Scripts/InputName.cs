@@ -15,6 +15,8 @@ public class InputName : MonoBehaviour
     [SerializeField] float loadingTime;
     [SerializeField] Slider loadingBar;
     [SerializeField] float barTime;
+    [SerializeField] TextMeshProUGUI inputName;
+    [SerializeField] static string companyName;
     bool isLoading;
     // Start is called before the first frame update
     void Start()
@@ -26,13 +28,15 @@ public class InputName : MonoBehaviour
         loadingBar.value = loadingBar.minValue;
         loadingBar.gameObject.SetActive(false);
         isLoading = false;
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(loadingBar.value == loadingBar.maxValue)
+        companyName = inputName.text;
+        if (loadingBar.value == loadingBar.maxValue)
         {
             SceneManager.LoadScene(1);
         }
@@ -50,6 +54,7 @@ public class InputName : MonoBehaviour
         loadingBar.gameObject.SetActive(true);
         isLoading = true;
         StartCoroutine(BootingUp());
+        
 
     }
     IEnumerator BootingUp()

@@ -145,15 +145,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: '@Username'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
+  m_sharedMaterial: {fileID: 1906965518480697188, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287393845
+  m_fontColor: {r: 0.20784314, g: 0.4392157, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -379,15 +379,15 @@ MonoBehaviour:
   m_text: The Sex Moment is the best kind of moment in the entire book yeah I want
     it to happen like so mich lmao
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
+  m_sharedMaterial: {fileID: 1906965518480697188, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287393845
+  m_fontColor: {r: 0.20784314, g: 0.4392157, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -526,15 +526,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 1}
+  m_Color: {r: 0.9339623, g: 0.92647296, b: 0.8590691, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -599,26 +599,6 @@ MonoBehaviour:
   content: {fileID: 3802466002320762876}
   timeDisplay: {fileID: 3802466003188253517}
   image: {fileID: 6325243723025120616}
-  possibleImages:
-  - {fileID: 21300000, guid: cb880eb432892404e94e4e1fa1f07e80, type: 3}
-  - {fileID: 21300000, guid: 47744a32a931ef541a3ee8e76ccfa779, type: 3}
-  - {fileID: 21300000, guid: ed4c93a4d82916c4fb26ffc0c30814d4, type: 3}
-  - {fileID: 21300000, guid: 763fe581cd19b694894afb1c07462871, type: 3}
-  - {fileID: 21300000, guid: df8de5a3d01a36c4bbc0ab12d8898b54, type: 3}
-  - {fileID: 21300000, guid: c44e04bfd0bdc9e4e99c508692b51efb, type: 3}
-  - {fileID: 21300000, guid: 50fe267b20e9c18478d6ad2900d47669, type: 3}
-  - {fileID: 21300000, guid: e5a7fdce5d7282b4b99b8f52acf4c847, type: 3}
-  - {fileID: 21300000, guid: 09b10d9d65f26ea41ad869df348015ec, type: 3}
-  - {fileID: 21300000, guid: da9559ba62469b745a9992846ca0b6da, type: 3}
-  - {fileID: 21300000, guid: 3c5c3a4bb52cce54dad529b207f84d60, type: 3}
-  - {fileID: 21300000, guid: 6b0d9481239b9af4bb235128b70bb06c, type: 3}
-  - {fileID: 21300000, guid: 37d28aa94afac6e42852d846c42332f8, type: 3}
-  - {fileID: 21300000, guid: 79c443fdaa38db341a4f16708208a808, type: 3}
-  - {fileID: 21300000, guid: c55568c8e4cfa3a458701c4a2fa9ecf1, type: 3}
-  - {fileID: 21300000, guid: 5177d510e00507b439715222266fb92d, type: 3}
-  - {fileID: 21300000, guid: b40099b5f5de59649ba4bd543f046490, type: 3}
-  - {fileID: 21300000, guid: ccea1b29bc576af4d8b948b8069b68b6, type: 3}
-  - {fileID: 21300000, guid: 2c58bb3be29d13346bd09cd1ee6c9298, type: 3}
 --- !u!1 &3802466003188253523
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,15 +667,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5m
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
+  m_sharedMaterial: {fileID: 1906965518480697188, guid: 8a7c6c459e9fc4f10ae8365f1eb664d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287393845
+  m_fontColor: {r: 0.20784314, g: 0.4392157, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

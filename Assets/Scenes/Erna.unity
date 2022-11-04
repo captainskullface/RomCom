@@ -416,6 +416,7 @@ MonoBehaviour:
   loadingTime: 0.12
   loadingBar: {fileID: 769406230}
   barTime: 0.2
+  inputName: {fileID: 188387717}
 --- !u!4 &235271262
 Transform:
   m_ObjectHideFlags: 0
