@@ -1,0 +1,3 @@
+Rocky Boeufgat
+My Husband is proud of me
+I'm getting so many emails from people who were like me asking for help and how was the process of becoming a better person. While I'm not equipped to help all these people, it's really nice to see so many people wanting to be better. My Husband was so happy I actually sent the manuscript, I suprised him with a copy for our anniversay. Thank you for making my dream a reality.

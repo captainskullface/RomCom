@@ -1,0 +1,3 @@
+Myles Esquerra
+BIG BOYFRIEND AND BIGGER SUCCESS
+Hello my dear it is Myles and I have come bearing amazing news. I was recently contacted by a notable reality TV producer and have begun work on a new show inspired by the book you published. I totally handed over the rights without argument. I am So excited. I am not being held at gunpoint while I type this. I am going to move to England to prepare for the role and get into the midset. I will see you later. Thank you for everything. 

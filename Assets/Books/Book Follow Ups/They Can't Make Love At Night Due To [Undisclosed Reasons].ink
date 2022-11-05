@@ -1,0 +1,3 @@
+C. U. Narbacular Tempertine
+update: amazing news
+hi im so happy to tell you that They Can't Make Love At Night Due To [Undisclosed Reasons] has already received a multi-million dollar movie deal and we will promptly begin shooting for this beautiful reimagining of my story and i will be mailing to tickets to your house dont ask how i know your address just trust that this was always meant to be our success is assured. enjoy the movie.
