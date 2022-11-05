@@ -48,6 +48,9 @@ public class PublishingManager : MonoBehaviour
     [SerializeField]
     List<string> negRev = new List<string>();
 
+    [SerializeField]
+    TextAsset genreDefyScreeches;
+
     public enum Genre
     {
         Eighties,
@@ -134,7 +137,8 @@ public class PublishingManager : MonoBehaviour
         ChangeMoney(-bookPublishCost);
 
         addWeight((Genre)genre, 1);
-        addWeight((Genre)subGenre, 0.5f);
+        if(subGenre >= 0)
+            addWeight((Genre)subGenre, 0.5f);
 
         float marketingScore = (1 - (Mathf.Abs(bestDemo - marketingDemo) / 2)) * marketingWeight;
 
@@ -156,6 +160,17 @@ public class PublishingManager : MonoBehaviour
         InkHandler.inkMan.NewBookPublished(index);
 
         ReviewScreeches((Mathf.Abs(bestDemo - marketingDemo)));
+
+        if (booksPublished > 3)
+        {
+            if ((Genre)genre != weightStats[0].genre && (Genre)genre != weightStats[1].genre && (Genre)genre != weightStats[2].genre && (Genre)genre != weightStats[4].genre)
+            {
+                Story genreDefy = new Story(genreDefyScreeches.text);
+                string defyScreech = genreDefy.Continue().TrimEnd();
+                defyScreech = defyScreech.Replace("=", (Genre)genre + "");
+                ScreecherManager.screecherMan.newScreech(defyScreech);
+            }
+        }
     }
 
     void ReviewScreeches(float score)
