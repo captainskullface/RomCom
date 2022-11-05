@@ -33,5 +33,11 @@
 -learning
 -genius
 -osmosis
+-remy
+-wilhelm
+-garganbi
+-ittapupu
+-mars
+-andromeda
 -marcus
 }

@@ -38,7 +38,25 @@ Chive Davis $chivychive
 I need 5 minutes without thinking about the Clive Davis institute 
 I would rather sit on a hot grill than take game studies again
 pov: ur in Tandon
-
+My sex has never been better and all I did was follow these 3 steps ~1. 13 buried ~2 0 found ~3 There will be more
+im just a weedman in search of weedwoman...
+im going to apply to nyu film and tv with only a piece of toilet paper in my portfolio
+when you are cutting meat and the knife starts gliding through it
+BEWARE
+;ll;;;;;;;;;;;lkwdmwa,wmdawoakxxwamdaxwdxxdawdsxsalkwd csorry ,ymy cat is on mykeybaord awdawd
+ahaha that monday vibe when oh my god no stop it you silly goose stop stop it oh my god doobie stop it ahaha ahaha oh my god quit it i mean it oh my god steve get the camera hes being so silly right now ahaha oh wait is this thing on speech to text oh how do i turn that off i want to open my camera oh my god stop i hope it doesnt post this stop it stop get the camera
+meow
+:3
+i am in your walls.
+guys wake me upwhen its time for class 
+123 FOR SCREECHER BOYFRIEND
+what would you do if i was outside your house
+ummmmmm and who up playin with they worm
+"you better not have big big worms in your mouth" ~the big big worms in my mouth:
+anime women\
+why is there a bear in washington square park
+why is there a bear in the brooklyn commons 
+why is there a bear in the game center
 
 
 
