@@ -47,7 +47,8 @@ public class InkHandler : MonoBehaviour
         public int quality;
         public TextAsset associatedScreeches;
         public TextAsset followUpEmail;
-        public BookStats(string _title, string _author, string _subjectLine, string _emailContents, string _synopsis, int _genre, int _subGenre, int _isSequel, int _targetDemo, int _quality, TextAsset _associatedScreeches, TextAsset _followUpEmail)
+        public int sequelIndex;
+        public BookStats(string _title, string _author, string _subjectLine, string _emailContents, string _synopsis, int _genre, int _subGenre, int _isSequel, int _targetDemo, int _quality, TextAsset _associatedScreeches, TextAsset _followUpEmail, int _sequelIndex)
         {
             title = _title;
             author = _author;
@@ -61,6 +62,7 @@ public class InkHandler : MonoBehaviour
             quality = _quality;
             associatedScreeches = _associatedScreeches;
             followUpEmail = _followUpEmail;
+            sequelIndex = _sequelIndex;
         }
     }
 
@@ -75,6 +77,18 @@ public class InkHandler : MonoBehaviour
 
     [SerializeField]
     List<TextAsset> bookScreeches = new List<TextAsset>();
+
+    [SerializeField]
+    public List<BookStats> sequels = new List<BookStats>();
+
+    [SerializeField]
+    List<TextAsset> sequelData = new List<TextAsset>();
+
+    [SerializeField]
+    List<TextAsset> sequelFollowUpEmails = new List<TextAsset>();
+
+    [SerializeField]
+    List<TextAsset> sequelScreeches = new List<TextAsset>();
 
     [SerializeField]
     List<TextAsset> randomEmails = new List<TextAsset>();
@@ -93,6 +107,7 @@ public class InkHandler : MonoBehaviour
         //random = new Story(randomScreeches.text);
         inkMan = this;
 
+        ParseSequels();
         ParseBooks();
 
         //companyName =InputName
@@ -154,29 +169,78 @@ public class InkHandler : MonoBehaviour
             TextAsset screeches = bookScreeches[i];
             TextAsset followUp = followUpEmails[i];
 
+            int sequelIndex = -1;
+            //This means theres a sequel
+            if(book.canContinue)
+            {
+                for(int s = 0; s < sequels.Count; s++)
+                {
+                    if (sequels[s].title.Contains(title))
+                        sequelIndex = s;
+                }
+            }
+
+
             synopsis = ProcessText(synopsis);
 
             subjectLine = ProcessText(subjectLine);
 
             emailContents = ProcessText(emailContents);
 
-            books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality, screeches, followUp));
+            books.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality, screeches, followUp, sequelIndex));
         }
 
         books.Shuffle();
         //books.Reverse();
     }
 
-    public void NewEmail(bool isBook, int index)
+    void ParseSequels()
+    {
+        for (int i = 0; i < sequelData.Count; i++)
+        {
+            Story sequelBook = new Story(sequelData[i].text);
+            string title = sequelBook.Continue();
+            string author = sequelBook.Continue();
+            string subjectLine = sequelBook.Continue();
+            string emailContents = sequelBook.Continue();
+            string synopsis = sequelBook.Continue();
+            int genre = int.Parse(sequelBook.Continue());
+            int subGenre = int.Parse(sequelBook.Continue());
+            int isSequel = int.Parse(sequelBook.Continue());
+            int targetDemo = int.Parse(sequelBook.Continue());
+            int quality = int.Parse(sequelBook.Continue());
+            TextAsset screeches = sequelScreeches[i];
+            TextAsset followUp = sequelFollowUpEmails[i];
+
+            synopsis = ProcessText(synopsis);
+
+            subjectLine = ProcessText(subjectLine);
+
+            emailContents = ProcessText(emailContents);
+
+            sequels.Add(new BookStats(title, author, subjectLine, emailContents, synopsis, genre, subGenre, isSequel, targetDemo, quality, screeches, followUp, -1));
+        }
+    }
+
+    public void NewEmail(bool isBook, int index, bool sequelBook = false)
     {
         if(isBook)
         {
             BookStats pitchedBook = books[index];
+
+            if (sequelBook)
+            {
+                books.Add(sequels[index]);
+                pitchedBook = sequels[index];
+            }
+
             EmailManager.emailMan.newEmail(pitchedBook.author, pitchedBook.subjectLine, pitchedBook.emailContents, index);
         }
-        else
+        else if(randomEmails.Count > 0)
         {
-            Story email = new Story(randomEmails[index].text);
+            int randomPick = Random.Range(0, randomEmails.Count);
+
+            Story email = new Story(randomEmails[randomPick].text);
             string sender = email.Continue();
             string subject = email.Continue();
             string contents = email.Continue();
@@ -191,6 +255,17 @@ public class InkHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y) * gameSpeed);
         StoryEmail(books[index].followUpEmail);
+
+        if(books[index].sequelIndex > 0)
+        {
+            StartCoroutine(SequelEmail(books[index].sequelIndex));
+        }
+    }
+
+    IEnumerator SequelEmail(int index)
+    {
+        yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y) * gameSpeed);
+        NewEmail(true, index, true);
     }
 
     void StoryEmail(TextAsset emailText)
