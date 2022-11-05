@@ -16,7 +16,7 @@ public class InputName : MonoBehaviour
     [SerializeField] Slider loadingBar;
     [SerializeField] float barTime;
     [SerializeField] TextMeshProUGUI inputName;
-    [SerializeField] static string companyName;
+    [SerializeField] public static string companyName;
     bool isLoading;
     // Start is called before the first frame update
     void Start()

@@ -79,6 +79,9 @@ public class PublishingManager : MonoBehaviour
     [SerializeField]
     TMP_Text amountPublishedDisplay;
 
+    [SerializeField]
+    TMP_Text companyNameDisplay;
+
     private void Awake()
     {
         publishMan = this;
@@ -87,6 +90,8 @@ public class PublishingManager : MonoBehaviour
     private void Start()
     {
         displayMoney = money;
+        amountPublishedDisplay.text = "0";
+        companyNameDisplay.text = "@" + InputName.companyName;
     }
 
     public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue, string title, int index)

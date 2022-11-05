@@ -96,7 +96,7 @@ public class WindowManager : MonoBehaviour
 
         float windowRatio = 0.8f;
 
-        if(apps[index].active && !instant)
+        if(apps[index].active || instant)
         {
             //Tweener open = DOTweenModuleUI.DOSizeDelta(appRect, Vector3.zero, animTime);
             appRect.DOMove(apps[index].transform.position, animTime);

@@ -110,7 +110,7 @@ public class InkHandler : MonoBehaviour
         ParseSequels();
         ParseBooks();
 
-        //companyName =InputName
+        companyName = InputName.companyName;
 
         StartCoroutine(BookFlow());
         StartCoroutine(SpamMailFlow());
@@ -173,9 +173,10 @@ public class InkHandler : MonoBehaviour
             //This means theres a sequel
             if(book.canContinue)
             {
-                for(int s = 0; s < sequels.Count; s++)
+                string sequelTitle = book.Continue();
+                for (int s = 0; s < sequels.Count; s++)
                 {
-                    if (sequels[s].title.Contains(title))
+                    if (sequelTitle.Contains(sequels[s].title))
                         sequelIndex = s;
                 }
             }
@@ -232,6 +233,7 @@ public class InkHandler : MonoBehaviour
             {
                 books.Add(sequels[index]);
                 pitchedBook = sequels[index];
+                index = books.Count - 1;
             }
 
             EmailManager.emailMan.newEmail(pitchedBook.author, pitchedBook.subjectLine, pitchedBook.emailContents, index);
@@ -256,7 +258,7 @@ public class InkHandler : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(followUpEmailDelayRange.x, followUpEmailDelayRange.y) * gameSpeed);
         StoryEmail(books[index].followUpEmail);
 
-        if(books[index].sequelIndex > 0)
+        if(books[index].sequelIndex >= 0)
         {
             StartCoroutine(SequelEmail(books[index].sequelIndex));
         }
