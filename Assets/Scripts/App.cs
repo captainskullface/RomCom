@@ -56,11 +56,13 @@ public class App : MonoBehaviour
         displayText.color = hiddenTextColor;
     }
 
-    public void Setup(string displayName, int indexSet, WindowManager man)
+    public void Setup(string displayName, int indexSet, WindowManager man, Sprite icon)
     {
         displayText.text = displayName;
         manager = man;
         index = indexSet;
+
+        GetComponent<Image>().sprite = icon;
     }
 
     private void Update()

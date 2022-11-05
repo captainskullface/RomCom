@@ -331,7 +331,7 @@ public class InkHandler : MonoBehaviour
         entry = entry.Replace("~", "\n");
         entry = entry.Replace("^", InkHandler.inkMan.companyName);
         entry = entry.Replace("$", "#");
-        entry = entry.Replace("*", PublishingManager.publishMan.lastPublished);
+        entry = entry.Replace("&", PublishingManager.publishMan.lastPublished.TrimEnd());
         return entry;
     }
 }

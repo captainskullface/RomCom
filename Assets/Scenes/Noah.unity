@@ -3260,7 +3260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &611417156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4245,7 +4245,7 @@ MonoBehaviour:
   - The Sex Moment is the best kind of moment in the entire book yeah I want it to
     happen like so mich lmao
   screeches: []
-  postIntervalRange: {x: 0.25, y: 3}
+  postIntervalRange: {x: 0.25, y: 4}
   possibleImages:
   - {fileID: 21300000, guid: cb880eb432892404e94e4e1fa1f07e80, type: 3}
   - {fileID: 21300000, guid: 47744a32a931ef541a3ee8e76ccfa779, type: 3}
@@ -4450,7 +4450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &713247475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6194,11 +6194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companyName: Big Dick Books
-  newBookInterval: {x: 35, y: 60}
-  followUpEmailDelayRange: {x: 15, y: 30}
-  randomEmailInterval: {x: 60, y: 120}
-  randomScreechInterval: {x: 45, y: 75}
-  gameSpeed: 0.2
+  newBookInterval: {x: 8, y: 15}
+  followUpEmailDelayRange: {x: 10, y: 12}
+  randomEmailInterval: {x: 35, y: 45}
+  randomScreechInterval: {x: 5, y: 20}
+  gameSpeed: 1
   books: []
   bookData:
   - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
@@ -8074,6 +8074,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  posReviews: {fileID: 4900000, guid: ed9b5e605529a8846b321ce3702ead8b, type: 3}
+  midReviews: {fileID: 4900000, guid: 9f712aeeb9a4c2340ad173c366a01f22, type: 3}
+  negReviews: {fileID: 4900000, guid: 27a20f5a21999fe4cb6fa7a3e1fdee36, type: 3}
+  posRev: []
+  midRev: []
+  negRev: []
   weightStats:
   - genre: 0
     weight: 0
@@ -8611,6 +8617,9 @@ MonoBehaviour:
   windows:
   - {fileID: 262692569}
   - {fileID: 697831526}
+  icons:
+  - {fileID: 21300000, guid: cc2bee11ef5db4692ab78c193344d5ad, type: 3}
+  - {fileID: 21300000, guid: c37b136f0fd2043448d3cf1397152c7b, type: 3}
   iconPrefab: {fileID: 1258182567794883848, guid: abfdbd0fc94041c42b6dea28df422a27, type: 3}
 --- !u!1 &1595354755
 GameObject:

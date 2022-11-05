@@ -9,6 +9,9 @@ public class WindowManager : MonoBehaviour
     [SerializeField]
     CanvasGroup[] windows;
 
+    [SerializeField]
+    Sprite[] icons;
+
     List<App> apps = new List<App>();
 
     [SerializeField]
@@ -24,7 +27,7 @@ public class WindowManager : MonoBehaviour
         {
             GameObject newTab = Instantiate(iconPrefab);
             App tabLogic = newTab.GetComponent<App>();
-            tabLogic.Setup(windows[i].gameObject.name, i, this);
+            tabLogic.Setup(windows[i].gameObject.name, i, this, icons[i]);
 
             newTab.transform.SetParent(transform);
             newTab.transform.position = transform.position;

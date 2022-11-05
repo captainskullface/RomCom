@@ -74,6 +74,8 @@ public class ScreecherManager : MonoBehaviour
         content = InkHandler.ProcessText(content);
             
         onDeck.Add(content);
+        if (onDeck.Count > 3)
+            onDeck.Shuffle();
     }
 
     void makeScreech(string content, bool forceImage = false)

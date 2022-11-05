@@ -1,3 +1,5 @@
+ummmm.... $problematic dont support ^ AT ALL.
+booooring.~$&
 ive never read a worse romance story in my life than &. and i read a LOT.
 i would have more fun reading one direction fanfiction than &.
 I need to join a religion to wash my hands of such filth~$&

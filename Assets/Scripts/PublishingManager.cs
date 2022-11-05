@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using Ink.Runtime;
 
 public class PublishingManager : MonoBehaviour
 {
@@ -30,6 +31,22 @@ public class PublishingManager : MonoBehaviour
 
     [SerializeField]
     AnimationCurve amountSmoothCurve;
+
+    [SerializeField]
+    TextAsset posReviews;
+
+    [SerializeField]
+    TextAsset midReviews;
+
+    [SerializeField]
+    TextAsset negReviews;
+
+    [SerializeField]
+    List<string> posRev = new List<string>();
+    [SerializeField]
+    List<string> midRev = new List<string>();
+    [SerializeField]
+    List<string> negRev = new List<string>();
 
     public enum Genre
     {
@@ -92,6 +109,24 @@ public class PublishingManager : MonoBehaviour
         displayMoney = money;
         amountPublishedDisplay.text = "0";
         companyNameDisplay.text = "@" + InputName.companyName;
+
+        Story pos = new Story(posReviews.text);
+        while(pos.canContinue)
+        {
+            posRev.Add(pos.Continue());
+        }
+
+        Story mid = new Story(midReviews.text);
+        while (mid.canContinue)
+        {
+            midRev.Add(mid.Continue());
+        }
+
+        Story neg = new Story(negReviews.text);
+        while (neg.canContinue)
+        {
+            negRev.Add(neg.Continue());
+        }
     }
 
     public void PublishBook(int genre, int subGenre, int sequel, int bestDemo, int marketingDemo, int bookValue, string title, int index)
@@ -119,6 +154,41 @@ public class PublishingManager : MonoBehaviour
         amountPublishedDisplay.text = booksPublished.ToString();
 
         InkHandler.inkMan.NewBookPublished(index);
+
+        ReviewScreeches((Mathf.Abs(bestDemo - marketingDemo)));
+    }
+
+    void ReviewScreeches(float score)
+    {
+        switch(score)
+        {
+            case 0f:
+                SendReviews(posRev);
+                Debug.Log("sending positive reviews");
+                break;
+            case 1f:
+                SendReviews(midRev);
+                Debug.Log("sending mid reviews");
+                break;
+            case 2f:
+                SendReviews(negRev);
+                Debug.Log("sending negative reviews");
+                break;
+        }
+    }
+
+    void SendReviews(List<string> revs)
+    {
+        int reviewAmount = Random.Range(3, 6);
+        List<string> useable = new List<string>();
+        useable.AddRange(revs);
+
+        for(int i = 0; i < reviewAmount; i++)
+        {
+            int pick = Random.Range(0, useable.Count);
+            ScreecherManager.screecherMan.newScreech(useable[pick]);
+            useable.RemoveAt(pick);
+        }
     }
 
     void ChangeMoney(int change)
