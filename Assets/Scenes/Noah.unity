@@ -6201,18 +6201,15 @@ MonoBehaviour:
   gameSpeed: 1
   books: []
   bookData:
-  - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
+  - {fileID: 4900000, guid: c2013808dfdd13a469d82285598c0698, type: 3}
   followUpEmails:
-  - {fileID: 4900000, guid: 86c4fb20664bae04a85f60b073d2aa9e, type: 3}
+  - {fileID: 4900000, guid: 2c6badb0244bcff498e7d75113903181, type: 3}
   bookScreeches:
   - {fileID: 4900000, guid: e878199624c777a4797be6f6e7cbd4a2, type: 3}
   sequels: []
-  sequelData:
-  - {fileID: 4900000, guid: 4e975ce9a2a361641ae3bf83a7bb404d, type: 3}
-  sequelFollowUpEmails:
-  - {fileID: 4900000, guid: 5e6f3ec29053cd74aaab16537b2bb9b5, type: 3}
-  sequelScreeches:
-  - {fileID: 4900000, guid: e878199624c777a4797be6f6e7cbd4a2, type: 3}
+  sequelData: []
+  sequelFollowUpEmails: []
+  sequelScreeches: []
   randomEmails: []
   usernameStarters: {fileID: 4900000, guid: 50eee33dfe0416f408badc8e1602f9f4, type: 3}
   usernameFillers: {fileID: 4900000, guid: 8b351281a597f1d44a96bb53d170421f, type: 3}
@@ -8080,6 +8077,7 @@ MonoBehaviour:
   posRev: []
   midRev: []
   negRev: []
+  genreDefyScreeches: {fileID: 4900000, guid: d456f131a6f94c2448956b21338d8675, type: 3}
   weightStats:
   - genre: 0
     weight: 0
