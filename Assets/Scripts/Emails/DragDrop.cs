@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.UI;
 
 //this goes on the obj taht is being dragged around
 
@@ -25,6 +26,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     GameObject publishWindow;
     RectTransform publishRect;
     //public Animator windowAnims;
+
+    [SerializeField]
+    Scrollbar scroll;
 
     [SerializeField]
     TMP_Text contents;
@@ -61,14 +65,28 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void TurnOn(string containedText)
     {
+        containedText = containedText.TrimEnd();
+
         open = true;
 
         rect.position = new Vector3(Screen.width / 2, Screen.height / 2);
 
         transform.SetAsLastSibling();
+
         contents.text = containedText;
+        //contents.GetComponent<ContentSizeFitter>().enabled = false;
+        contents.fontSize += 1;
+        Invoke("FitText", 0.05f);
+
         Tweener show = rect.DOScale(Vector3.one, animTime);
         show.Play();
+    }
+
+    void FitText()
+    {
+        contents.fontSize -= 1;
+        contents.GetComponent<ContentSizeFitter>().enabled = true;
+        scroll.value = 1;
     }
 
     public void TurnOff()

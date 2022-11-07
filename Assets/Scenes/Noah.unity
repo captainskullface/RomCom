@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 59757937}
   - component: {fileID: 59757939}
   m_Layer: 0
-  m_Name: Contents
+  m_Name: Text Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 315, y: 0}
   m_SizeDelta: {x: 560, y: 0}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &59757937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +230,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 4
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 20, z: 0, w: 20}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4383,8 +4383,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
-  m_fontSizeBase: 29
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4605,7 +4605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00000915203}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &721915044
@@ -4638,9 +4638,9 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 20
-    m_Bottom: 0
+    m_Bottom: 20
   m_ChildAlignment: 1
-  m_Spacing: 20
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -5875,6 +5875,7 @@ MonoBehaviour:
   canvas: {fileID: 916184675}
   deleteWindow: {fileID: 1561244914}
   publishWindow: {fileID: 1901411736}
+  scroll: {fileID: 1291637276}
   contents: {fileID: 59757937}
 --- !u!61 &1062195588
 BoxCollider2D:
@@ -6194,11 +6195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companyName: Big Dick Books
-  newBookInterval: {x: 8, y: 15}
-  followUpEmailDelayRange: {x: 10, y: 12}
+  newBookInterval: {x: 10, y: 20}
+  followUpEmailDelayRange: {x: 10, y: 15}
   randomEmailInterval: {x: 35, y: 45}
-  randomScreechInterval: {x: 5, y: 20}
-  gameSpeed: 1
+  randomScreechInterval: {x: 8, y: 20}
+  gameSpeed: 0
   books: []
   bookData:
   - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
@@ -6733,7 +6734,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 128698637}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.725361
+  m_Size: 0.56287116
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
