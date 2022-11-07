@@ -6199,10 +6199,11 @@ MonoBehaviour:
   followUpEmailDelayRange: {x: 10, y: 15}
   randomEmailInterval: {x: 35, y: 45}
   randomScreechInterval: {x: 8, y: 20}
-  gameSpeed: 0
+  gameSpeed: 1
   books: []
   bookData:
   - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
+  - {fileID: 4900000, guid: 206c50b0d68da7340a12648498a3823a, type: 3}
   - {fileID: 4900000, guid: c2013808dfdd13a469d82285598c0698, type: 3}
   - {fileID: 4900000, guid: 257e5dfd0cf0f484da028281ce874891, type: 3}
   - {fileID: 4900000, guid: 3b7b989936170ac4085d21332725a86e, type: 3}
@@ -6227,6 +6228,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: ccd33554754cb2449a58fb7e0790319b, type: 3}
   followUpEmails:
   - {fileID: 4900000, guid: 86c4fb20664bae04a85f60b073d2aa9e, type: 3}
+  - {fileID: 4900000, guid: de130b88fbebd7243bf9fd8a8de7f7e3, type: 3}
   - {fileID: 4900000, guid: 2c6badb0244bcff498e7d75113903181, type: 3}
   - {fileID: 4900000, guid: 458a6d76700d8b6499d383fa7fa60e35, type: 3}
   - {fileID: 4900000, guid: 746c1d54078a7374e9b86415a1b68e47, type: 3}
@@ -6251,6 +6253,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 5cda72c08beaf0743b2f9b9dd0cf8a6c, type: 3}
   bookScreeches:
   - {fileID: 4900000, guid: 2ae606e2d0a28f2448fd3c3e57a988c1, type: 3}
+  - {fileID: 4900000, guid: a1b1a4cd77ebc4640b978df82a9f3f6d, type: 3}
   - {fileID: 4900000, guid: e878199624c777a4797be6f6e7cbd4a2, type: 3}
   - {fileID: 4900000, guid: cfeb905480b277d48a5b7e4bd531f11c, type: 3}
   - {fileID: 4900000, guid: 57549c9ca6bb73b4b90f63fa1f724080, type: 3}
@@ -6275,12 +6278,15 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 657ec98ce9d9e794cb30b7abb56bdaf1, type: 3}
   sequels: []
   sequelData:
+  - {fileID: 4900000, guid: 0cf4b1f96c3d7e04e8e17f025c85229b, type: 3}
   - {fileID: 4900000, guid: 4e975ce9a2a361641ae3bf83a7bb404d, type: 3}
   - {fileID: 4900000, guid: e64b24ae46f265847a1da3dbbfd5daf8, type: 3}
   sequelFollowUpEmails:
+  - {fileID: 4900000, guid: b3286e0741d9ee645958ce67996630a7, type: 3}
   - {fileID: 4900000, guid: 5e6f3ec29053cd74aaab16537b2bb9b5, type: 3}
   - {fileID: 4900000, guid: f5d26a3b992a0ed439903f855e1567bd, type: 3}
   sequelScreeches:
+  - {fileID: 4900000, guid: ad997458ef893064490bbae06044dba8, type: 3}
   - {fileID: 4900000, guid: 9116c695d16e3d24ea370d62838ddcb9, type: 3}
   - {fileID: 4900000, guid: 0764c5efc72f6444db3910a2fda705c7, type: 3}
   randomEmails: []
