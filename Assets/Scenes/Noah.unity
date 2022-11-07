@@ -6201,15 +6201,87 @@ MonoBehaviour:
   gameSpeed: 1
   books: []
   bookData:
+  - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
   - {fileID: 4900000, guid: c2013808dfdd13a469d82285598c0698, type: 3}
+  - {fileID: 4900000, guid: 257e5dfd0cf0f484da028281ce874891, type: 3}
+  - {fileID: 4900000, guid: 3b7b989936170ac4085d21332725a86e, type: 3}
+  - {fileID: 4900000, guid: 19a872c63b28316499ca9fceeb74440e, type: 3}
+  - {fileID: 4900000, guid: 87b301e736a39a94eb86334a411dff46, type: 3}
+  - {fileID: 4900000, guid: 7e3d6625d6ec3bb44be105215a309202, type: 3}
+  - {fileID: 4900000, guid: 1a5b07fb46b299d44b454df02e5d50af, type: 3}
+  - {fileID: 4900000, guid: b1806a0ca09618b4ca860272735bc9c9, type: 3}
+  - {fileID: 4900000, guid: f322fafe3b792ff4da3918eba820475e, type: 3}
+  - {fileID: 4900000, guid: e7ddaf3c99188b94da4e58035c97be7b, type: 3}
+  - {fileID: 4900000, guid: 70a2f5734acacee4289a0634c4381c6f, type: 3}
+  - {fileID: 4900000, guid: d32e1ea54075bf64e92382f6787983fc, type: 3}
+  - {fileID: 4900000, guid: 97fa7b7f4feca394e911cbb976481706, type: 3}
+  - {fileID: 4900000, guid: 0264abfb851692b4790c806587c825a7, type: 3}
+  - {fileID: 4900000, guid: 9e068065549cfcb479fb0f9720ea355d, type: 3}
+  - {fileID: 4900000, guid: 778ae3650a45b624e8f15448d02cd5f0, type: 3}
+  - {fileID: 4900000, guid: ecad53b012948174e97883f1f08194ef, type: 3}
+  - {fileID: 4900000, guid: 83878c00c06229d489c3ca4c218ec5ef, type: 3}
+  - {fileID: 4900000, guid: c885952410f24d64e9cd6bc67e2d8ab5, type: 3}
+  - {fileID: 4900000, guid: 103354a3cc40f1945bc42501f0b5793d, type: 3}
+  - {fileID: 4900000, guid: d322a17083c394d4e9208771b3692846, type: 3}
+  - {fileID: 4900000, guid: ccd33554754cb2449a58fb7e0790319b, type: 3}
   followUpEmails:
+  - {fileID: 4900000, guid: 86c4fb20664bae04a85f60b073d2aa9e, type: 3}
   - {fileID: 4900000, guid: 2c6badb0244bcff498e7d75113903181, type: 3}
+  - {fileID: 4900000, guid: 458a6d76700d8b6499d383fa7fa60e35, type: 3}
+  - {fileID: 4900000, guid: 746c1d54078a7374e9b86415a1b68e47, type: 3}
+  - {fileID: 4900000, guid: 0fda789a13f74954782c260f38a2855a, type: 3}
+  - {fileID: 4900000, guid: 458474c3f774a01439c248c686579291, type: 3}
+  - {fileID: 4900000, guid: 86675186edd2ab44ea2638cb309626da, type: 3}
+  - {fileID: 4900000, guid: 43feeae7afe3c454f92d7cc406bf7ea3, type: 3}
+  - {fileID: 4900000, guid: 8697ea055e9c60841982c108dfa20042, type: 3}
+  - {fileID: 4900000, guid: 7214cf52e518aaf4395d1d54df6f4226, type: 3}
+  - {fileID: 4900000, guid: c5e8288b116bf374ebe2c84a21a82587, type: 3}
+  - {fileID: 4900000, guid: 911c6cd90aa667a4daf85bf98ddf4e23, type: 3}
+  - {fileID: 4900000, guid: ada420024f29a4a46931c12715fd3205, type: 3}
+  - {fileID: 4900000, guid: f4067ddeaa68cc84da1ec00cb895277b, type: 3}
+  - {fileID: 4900000, guid: 23f35d939f78aad4ca18f80017c39c68, type: 3}
+  - {fileID: 4900000, guid: da8cf08bbaaae5745a574ba1a9960011, type: 3}
+  - {fileID: 4900000, guid: c7aed3ba3ba27a6458ed502ead875fe2, type: 3}
+  - {fileID: 4900000, guid: 326c0edcdfd5d5b408b76b9673ab3aa5, type: 3}
+  - {fileID: 4900000, guid: aa01d552b34beec45a44f78a04c3bfec, type: 3}
+  - {fileID: 4900000, guid: b7e0db50c4734b74ba973a8e166447b4, type: 3}
+  - {fileID: 4900000, guid: 1f8a15afb4bda4141a71e7e9d03d1126, type: 3}
+  - {fileID: 4900000, guid: 917e28926ff7c3244a8292eaede6768a, type: 3}
+  - {fileID: 4900000, guid: 5cda72c08beaf0743b2f9b9dd0cf8a6c, type: 3}
   bookScreeches:
+  - {fileID: 4900000, guid: 2ae606e2d0a28f2448fd3c3e57a988c1, type: 3}
   - {fileID: 4900000, guid: e878199624c777a4797be6f6e7cbd4a2, type: 3}
+  - {fileID: 4900000, guid: cfeb905480b277d48a5b7e4bd531f11c, type: 3}
+  - {fileID: 4900000, guid: 57549c9ca6bb73b4b90f63fa1f724080, type: 3}
+  - {fileID: 4900000, guid: f246febd9f0a9a14783e0fbadb8db003, type: 3}
+  - {fileID: 4900000, guid: 6a8618c15eb4a4d4e8ea40721bec8737, type: 3}
+  - {fileID: 4900000, guid: 66bb086df3a818f4f82bc69861b025c2, type: 3}
+  - {fileID: 4900000, guid: 6f41aab01459d984e97791042b5255aa, type: 3}
+  - {fileID: 4900000, guid: 840e093e2f3c91e4a8c31b4b0831fe9f, type: 3}
+  - {fileID: 4900000, guid: 5136628fd29603048a6fb5b56842bc6f, type: 3}
+  - {fileID: 4900000, guid: 01f6f5f14b71ccc42816f9fdfa561623, type: 3}
+  - {fileID: 4900000, guid: c585123db58bc264e93e239eb22c2686, type: 3}
+  - {fileID: 4900000, guid: 315c6f729f2d03c47a6cbce32b418363, type: 3}
+  - {fileID: 4900000, guid: 7109bb3eb5ff5484ca762e46330bb335, type: 3}
+  - {fileID: 4900000, guid: 5b3dd4d58c785c2458dee08b96e2e320, type: 3}
+  - {fileID: 4900000, guid: 4aadc521c1f873a488dc834b07ad2d57, type: 3}
+  - {fileID: 4900000, guid: 469553ecd7547f94b88ee6395f0f7049, type: 3}
+  - {fileID: 4900000, guid: 0d457027e6ac0a44b9651c6707aa3eb5, type: 3}
+  - {fileID: 4900000, guid: 3fb10524807ff0c45b23052fb22cd960, type: 3}
+  - {fileID: 4900000, guid: d93915f314bf2134e89a48c4eeb66cb5, type: 3}
+  - {fileID: 4900000, guid: d3dcaa96f67bf7b45b8d0a479376c4b7, type: 3}
+  - {fileID: 4900000, guid: a76f2fce6bdb36d4ebf4d19e8c6d8392, type: 3}
+  - {fileID: 4900000, guid: 657ec98ce9d9e794cb30b7abb56bdaf1, type: 3}
   sequels: []
-  sequelData: []
-  sequelFollowUpEmails: []
-  sequelScreeches: []
+  sequelData:
+  - {fileID: 4900000, guid: 4e975ce9a2a361641ae3bf83a7bb404d, type: 3}
+  - {fileID: 4900000, guid: e64b24ae46f265847a1da3dbbfd5daf8, type: 3}
+  sequelFollowUpEmails:
+  - {fileID: 4900000, guid: 5e6f3ec29053cd74aaab16537b2bb9b5, type: 3}
+  - {fileID: 4900000, guid: f5d26a3b992a0ed439903f855e1567bd, type: 3}
+  sequelScreeches:
+  - {fileID: 4900000, guid: 9116c695d16e3d24ea370d62838ddcb9, type: 3}
+  - {fileID: 4900000, guid: 0764c5efc72f6444db3910a2fda705c7, type: 3}
   randomEmails: []
   usernameStarters: {fileID: 4900000, guid: 50eee33dfe0416f408badc8e1602f9f4, type: 3}
   usernameFillers: {fileID: 4900000, guid: 8b351281a597f1d44a96bb53d170421f, type: 3}
