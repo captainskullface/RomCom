@@ -32,6 +32,13 @@ public class ScreecherManager : MonoBehaviour
     [SerializeField]
     float chanceForImage = 25f; //Percent
 
+    [SerializeField]
+    Scrollbar scrollbar;
+
+    float scrollValue;
+    float scrollSize;
+    float timeLineSize;
+
     private void Awake()
     {
         screecherMan = this;
@@ -80,6 +87,10 @@ public class ScreecherManager : MonoBehaviour
 
     void makeScreech(string content, bool forceImage = false)
     {
+        //scrollValue = scrollbar.value;
+        //scrollSize = scrollbar.size;
+        timeLineSize = timeLine.GetComponent<RectTransform>().rect.height;
+
         StartCoroutine(CoolDown());
 
         GameObject newScreech = Instantiate(screechPrefab);
@@ -106,6 +117,26 @@ public class ScreecherManager : MonoBehaviour
         screechLogic.setUp(content, imageSet);
 
         onDeck.Remove(onDeck[0]);
+
+        Invoke("ScrollChanges", 0.05f);
+    }
+
+    void ScrollChanges()
+    {
+        //Debug.Log("Change in Salue: " + (scrollbar.value - scrollValue));
+        //Debug.Log("Change in Size: " + (scrollbar.size - scrollSize));
+
+        //float valueChange = (scrollbar.value - scrollValue);
+        float sizeChange = timeLine.GetComponent<RectTransform>().rect.height - timeLineSize;
+        float changeRatio = sizeChange / timeLine.GetComponent<RectTransform>().rect.height;
+
+        scrollbar.value = (scrollValue - Mathf.Abs(changeRatio));
+        scrollValue = scrollbar.value;
+    }
+
+    public void syncScroll()
+    {
+        scrollValue = scrollbar.value;
     }
 
     void ResetImages()

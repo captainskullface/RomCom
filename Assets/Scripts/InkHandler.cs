@@ -28,6 +28,9 @@ public class InkHandler : MonoBehaviour
     List<string> randomScreechBank = new List<string>();
     List<string> availableRandomScreech = new List<string>();
 
+    [SerializeField]
+    TextAsset tutorialEmail;
+
     int booksDone = 0;
 
     [System.Serializable]
@@ -124,6 +127,13 @@ public class InkHandler : MonoBehaviour
             randomScreechBank.Add(screech);
         }
         availableRandomScreech.AddRange(randomScreechBank);
+
+        Invoke("SendTutorial", 1f);
+    }
+
+    void SendTutorial()
+    {
+        StoryEmail(tutorialEmail);
     }
 
     IEnumerator BookFlow()

@@ -57,8 +57,4 @@ anime women\
 why is there a bear in washington square park
 why is there a bear in the brooklyn commons 
 why is there a bear in the game center
-
-
-
-
-
+The Sex Moment is the best kind of moment in the entire book yeah I want it to happen like so mich lmao

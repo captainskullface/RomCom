@@ -4241,9 +4241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLine: {fileID: 1112639561}
   screechPrefab: {fileID: 3802466003112520965, guid: d508688de447a6c47b5fc0603956c530, type: 3}
-  onDeck:
-  - The Sex Moment is the best kind of moment in the entire book yeah I want it to
-    happen like so mich lmao
+  onDeck: []
   screeches: []
   postIntervalRange: {x: 0.25, y: 4}
   possibleImages:
@@ -4271,6 +4269,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 86ce93fcb77c6c44f86e5fe2af66b617, type: 3}
   - {fileID: 21300000, guid: 2c58bb3be29d13346bd09cd1ee6c9298, type: 3}
   chanceForImage: 25
+  scrollbar: {fileID: 1812091193}
 --- !u!114 &697831530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6122,7 +6121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0004272461, y: -0.0005338119}
+  m_AnchoredPosition: {x: -0.0004272461, y: 0.000023007393}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1112639562
@@ -6195,17 +6194,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companyName: Big Dick Books
-  newBookInterval: {x: 10, y: 20}
+  newBookInterval: {x: 30, y: 45}
   followUpEmailDelayRange: {x: 10, y: 15}
   randomEmailInterval: {x: 35, y: 45}
-  randomScreechInterval: {x: 8, y: 20}
+  randomScreechInterval: {x: 10, y: 20}
   gameSpeed: 1
+  tutorialEmail: {fileID: 4900000, guid: e432d7e9d084bda40a2608b03a3768b7, type: 3}
   books: []
   bookData:
   - {fileID: 4900000, guid: 98c474420fa43804eb0c6bd460da75f1, type: 3}
   - {fileID: 4900000, guid: 206c50b0d68da7340a12648498a3823a, type: 3}
   - {fileID: 4900000, guid: c2013808dfdd13a469d82285598c0698, type: 3}
   - {fileID: 4900000, guid: 257e5dfd0cf0f484da028281ce874891, type: 3}
+  - {fileID: 4900000, guid: 2fcb7e86c48bf014daa58cffb9f4235e, type: 3}
   - {fileID: 4900000, guid: 3b7b989936170ac4085d21332725a86e, type: 3}
   - {fileID: 4900000, guid: 19a872c63b28316499ca9fceeb74440e, type: 3}
   - {fileID: 4900000, guid: 87b301e736a39a94eb86334a411dff46, type: 3}
@@ -6231,6 +6232,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: de130b88fbebd7243bf9fd8a8de7f7e3, type: 3}
   - {fileID: 4900000, guid: 2c6badb0244bcff498e7d75113903181, type: 3}
   - {fileID: 4900000, guid: 458a6d76700d8b6499d383fa7fa60e35, type: 3}
+  - {fileID: 4900000, guid: 606d84bac96162e4f8072a4da4e8df6e, type: 3}
   - {fileID: 4900000, guid: 746c1d54078a7374e9b86415a1b68e47, type: 3}
   - {fileID: 4900000, guid: 0fda789a13f74954782c260f38a2855a, type: 3}
   - {fileID: 4900000, guid: 458474c3f774a01439c248c686579291, type: 3}
@@ -6256,6 +6258,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: a1b1a4cd77ebc4640b978df82a9f3f6d, type: 3}
   - {fileID: 4900000, guid: e878199624c777a4797be6f6e7cbd4a2, type: 3}
   - {fileID: 4900000, guid: cfeb905480b277d48a5b7e4bd531f11c, type: 3}
+  - {fileID: 4900000, guid: 50fe5b4668ec40d4cb115b9ec93db593, type: 3}
   - {fileID: 4900000, guid: 57549c9ca6bb73b4b90f63fa1f724080, type: 3}
   - {fileID: 4900000, guid: f246febd9f0a9a14783e0fbadb8db003, type: 3}
   - {fileID: 4900000, guid: 6a8618c15eb4a4d4e8ea40721bec8737, type: 3}
@@ -7648,9 +7651,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1438580449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7819,6 +7822,9 @@ MonoBehaviour:
   buttonHover: {fileID: 0}
   newEmail: {fileID: 8300000, guid: de5c2ccfdfa1a8b4290ec60a0d334b79, type: 3}
   screechPosted: {fileID: 8300000, guid: aa93e7933fdcdd548bb1f7bbda5950d0, type: 3}
+  publishSound: {fileID: 8300000, guid: 2990bc2255ad859428789cef30cc8fed, type: 3}
+  rejectSound: {fileID: 8300000, guid: a786b0c1ab980644f921f3a0a1c535f3, type: 3}
+  viewBookSound: {fileID: 8300000, guid: a5041205f01a9244f8e99dd1d877bf00, type: 3}
 --- !u!4 &1477687237
 Transform:
   m_ObjectHideFlags: 0
@@ -9701,12 +9707,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1438580449}
   m_HandleRect: {fileID: 1438580448}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 697831529}
+        m_TargetAssemblyTypeName: ScreecherManager, Assembly-CSharp
+        m_MethodName: syncScroll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1812091194
 MonoBehaviour:
   m_ObjectHideFlags: 0

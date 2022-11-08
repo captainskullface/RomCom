@@ -80,6 +80,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
         Tweener show = rect.DOScale(Vector3.one, animTime);
         show.Play();
+
+        AudioManager.audioMan.viewBook();
     }
 
     void FitText()
@@ -94,6 +96,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         open = false;
 
         Tweener close = rect.DOScale(0, animTime);
+        
         close.Play();
 
         if (deleteWindow.activeInHierarchy)
@@ -101,6 +104,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
         if (publishWindow.activeInHierarchy)
             HidePublish();
+        Invoke("SendToBack", animTime * 0.75f);
+        
+    }
+
+    void SendToBack()
+    {
+        transform.SetAsFirstSibling();
     }
 
     //--------------------------------------------------------------------

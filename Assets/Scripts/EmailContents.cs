@@ -123,11 +123,13 @@ public class EmailContents : MonoBehaviour
     {
         InkHandler.BookStats bookInfo = InkHandler.inkMan.books[bookIndex];
         PublishingManager.publishMan.PublishBook(bookInfo.genre, bookInfo.subGenre, bookInfo.isSequel, bookInfo.targetDemo, marketedDemo, bookInfo.quality, bookInfo.title, bookIndex);
+        AudioManager.audioMan.PublishBook();
     }
 
     public void RejectHeldBook()
     {
         InkHandler.inkMan.books[bookIndex].rejected = true;
+        AudioManager.audioMan.RejectBook();
     }
     public void ShowSynopsis()
     {

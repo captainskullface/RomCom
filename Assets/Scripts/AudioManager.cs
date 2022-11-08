@@ -17,6 +17,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioClip screechPosted;
 
+    [SerializeField]
+    AudioClip publishSound;
+
+    [SerializeField]
+    AudioClip rejectSound;
+
+    [SerializeField]
+    AudioClip viewBookSound;
+
     AudioSource source;
 
     private void Awake()
@@ -44,6 +53,21 @@ public class AudioManager : MonoBehaviour
     {
         PlaySound(screechPosted);
     }
+
+    public void PublishBook()
+    {
+        PlaySound(publishSound);
+    }
+
+    public void RejectBook()
+    {
+        PlaySound(rejectSound);
+    }
+
+    public void viewBook()
+    {
+        PlaySound(viewBookSound);
+    }    
 
     public void PlaySound(AudioClip sound, float volume = 1)
     {

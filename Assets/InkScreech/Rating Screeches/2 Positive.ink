@@ -5,7 +5,7 @@ What's the point, I'll never be complete. I'll never find love like this ever in
 I FUCKING LOVE THE SEX MOMENT SO MUCH~~$&
 this shit fucks $&
 X3333333 OMG....~$&
-&This Message has been removed by mods due to obscene nsfw descriptions& /
+$This Message has been removed by mods due to obscene NSFW descriptions$
 PEEEEAAAK!~~$&
 &... sexy...
 going to film a book review on this i have so many (positive) thoughts~~$&
